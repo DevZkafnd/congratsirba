@@ -1015,13 +1015,12 @@ Developed by Naboraj Sarkar. Contributions and improvements are welcome.
 
 > Need help, collab, or just want to connect? 👇
 
-- 📧 **Email** → [nishant.ns.business@gmail.com](mailto:nishant.ns.business@gmail.com)  
-- 💬 **WhatsApp** → [Message Me now](https://wa.me/918900653250?text=Hey%20I%20am%20coming%20from%20your%20Birthday%20Boom%20project%20on%20GitHub%2C%20I%20want%20to%20talk%20about%20it)
+- 📧 **Email** → [msg@naborajs.me](mailto:msg@naborajs.me)  
+- 💬 **WhatsApp** → [Message Me now](https://wa.me/918900653250?text=Hey%20I%20am%20coming%20from%20your%20Birthday%20Bloom%20project%20on%20GitHub%2C%20I%20want%20to%20talk%20about%20it)
 - 💬 **Telegram** → [@Nishantsarkar10k](https://t.me/Nishantsarkar10k)  
-- 🐦 **Twitter (X)** → [@NSGAMMING699](https://x.com/NSGAMMING699)
+- 🐦 **Twitter (X)** → [@ItsNaborajs](https://x.com/ItsNaborajs)
 - 📸 **Instagram** → [@naborajs](https://instagram.com/naborajs)
-- 🌐 **Website** → [naborajs.com](https://naborajs.com)  
-- 📧 **Support / Business** → [nishant.ns.business@gmail.com](mailto:nishant.ns.business@gmail.com)
+- 🌐 **Website** → [naborajs.com](https://naborajs.me)  
 - 🐙 **GitHub** → [github.com/naborajs]
 - 🎥 **YouTube** → [Naboraj Sarkar Channel](https://youtube.com/@nishant_sarkar)
 
