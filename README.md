@@ -618,42 +618,6 @@ This section provides a technical breakdown of every major component in the engi
 
 ---
 
-## 🪝 Custom Hooks Documentation
-
-Birthday Bloom utilizes several custom hooks to offload imperative side effects from pure UI components.
-
-### `useBirthdayStore()`
-Our central state manager built with **Zustand**. 
-- `config`: The full `BirthdayConfig` object hydrated from ENV.
-- `getMood()`: Returns `'romantic' | 'energetic' | 'warm'` based on relationship.
-- `getAnimationPacing()`: Returns `'slow' | 'fast' | 'moderate'`.
-
-### `useDynamicTheme()`
-Injects HSL variables into the `:root` element.
-- Automatically calculates hover states and glow colors.
-- Syncs the browser's `theme-color` meta tag with the user's favorite color.
-
-### `useConfetti()`
-A robust hook that wraps `canvas-confetti`.
-- `fireConfetti(config)`: Triggers a localized burst with custom spread arrays.
-- `fireCannon()`: Triggers a massive, multi-directional burst utilized primarily for the Cake Cutting finale.
-- `fireStars()`: Interjects an SVG star-polygon shape into the physics engine for premium emotional moments.
-
-### `useSoundManager()`
-Handles HTML5 Audio instances without cluttering the DOM with invisible `<audio>` tags.
-- Provides `playWhoosh()`, `playType()`, `playBoom()` closures.
-- Respects the `.env` `VITE_ALLOW_AUDIO` boolean automatically. 
-
----
-
-## 🔐 Security & Data Integrity
-
-1. **Client-Side Safety**: All `VITE_` variables are public. Do not store sensitive passwords in the environment variables.
-2. **Input Sanitization**: The name and message fields are sanitized before being injected into the DOM to prevent basic XSS attempts.
-3. **Audio Permissions**: We respect browser autoplay policies by requiring a "Splash" interaction; audio is never forced without user consent.
-
----
-
 <div align="center">
   <figure>
     <img src="src/assets/faq.png" alt="Birthday Bloom troubleshooting guide" style="max-width:100%;height:auto;border-radius:18px;box-shadow:0 24px 72px rgba(0,0,0,0.24);" />
@@ -695,19 +659,6 @@ A: Ensure your Node version is 18+. Check for case-sensitive file imports (e.g.,
 
 **Q: How do I remove the "Naboraj Sarkar" branding?**
 A: You are free to modify the footer in `MainBirthday.tsx`, but keeping a small "Powered by Birthday Bloom" is appreciated!
-
----
-
-## ⚡ Performance Profiling & GPU Acceleration
-
-Despite the visual complexity, this repository maintains an incredibly lightweight footprint.
-- **No Heavy Physics Libraries**: Rather than including `matter.js` or `three.js` which parse 500kb-1MB of JS memory chunks, we use `requestAnimationFrame` hooks and native CSS for sparkles, balloons, and typing.
-- **SVG Over Images**: The Interactive Cake and Heart Tree are 100% vector SVG geometries.
-- **GPU Offloading**: Animations (`translate3d`) utilize hardware acceleration, shifting work from the CPU to the GPU rendering pipeline. This secures 60 frames per second on both desktop and mobile iOS/Android browsers.
-- **Lighthouse Goals**:
-  - **LCP (Largest Contentful Paint)**: < 1.2s
-  - **FID (First Input Delay)**: < 100ms
-  - **CLS (Cumulative Layout Shift)**: 0.00
 
 ---
 <div align="center">
@@ -1077,11 +1028,13 @@ Developed by Naboraj Sarkar. Contributions and improvements are welcome.
 
 ---
 
-### ⚡ Quick Actions
+## 👥 Contributors
 
-- 🚀 **Report Issue** → [Open GitHub Issue](../../issues)  
-- 💡 **Suggest Feature** → [Create Request](../../issues/new)  
-- ⭐ **Support Project** → Star this repo  
+Thank you to all the incredible people who have contributed to making Birthday Bloom a reality! 🙌
+
+<a href="https://github.com/naborajs/birthday-bloom/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=naborajs/birthday-bloom" alt="Birthday Bloom Contributors" />
+</a>
 
 ---
 
