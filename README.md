@@ -580,44 +580,6 @@ For developers wanting to run this locally, clone, and fork:
 
 ---
 
-## 🔌 Component API Reference
-
-This section provides a technical breakdown of every major component in the engine.
-
-### `<TypeWriter />` API
-| Prop | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `text` | `string` | **required** | The sentence to type out. |
-| `speed` | `number` | `45` | Speed in milliseconds between keystrokes. |
-| `delay` | `number` | `0` | Delay in milliseconds before typing begins. |
-| `cursor`| `boolean`| `true` | Whether to show the blinking cursor. |
-| `onComplete`| `() => void` | `undefined` | Callback fired when typing ends. |
-| `className` | `string` | `""` | Custom Tailwind classes for the text container. |
-
-### `<HeartTree />` API (UNDER DEVELOPMENT)
-| Prop | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `delay` | `number` | `1000` | Minimum delay before the trunk begins to grow. |
-| `color` | `string` | `primary` | The color of the hearts (defaults to config). |
-
-### `<CakeCutting />` API
-- **Internal Logic**: Uses a 4-phase state machine (`select` -> `wish` -> `cut` -> `quotes`).
-- **SVG Structure**: 100% vector-based, responsive to all screen sizes.
-- **Haptics**: Triggers `navigator.vibrate` during the "burst" phase.
-
-### `<PhotoGallery />` API
-- **Auto-Advance**: Slides change every 6 seconds by default.
-- **3D Tilt**: Follows mouse position using Framer Motion `useMotionValue`.
-- **Lightbox**: Uses `AnimatePresence` for a cinematic blur transition.
-
-### `<CinematicIntro />` API
-| Prop | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `onComplete` | `() => void` | **required** | Triggered when the final scene finishes. |
-| `speedMultiplier`| `number` | `1.0` | Global multiplier for all scene timings. |
-
----
-
 <div align="center">
   <figure>
     <img src="src/assets/faq.png" alt="Birthday Bloom troubleshooting guide" style="max-width:100%;height:auto;border-radius:18px;box-shadow:0 24px 72px rgba(0,0,0,0.24);" />
@@ -784,16 +746,6 @@ While not used extensively yet, our engine supports path morphing. You can trans
 | **3D Effects** | Interactive & Tilting | Static Images |
 | **Narrative** | Finite State Machine | Single Scroll Page |
 | **Branding** | Naboraj Sarkar Premium | Generic / Watermarked |
-
----
-
-## 🏆 Project Credits & Acknowledgements (Extended)
-
-This project is a labor of love. We would like to thank:
-- **The Naboraj Sarkar Community**: For testing early alphas and providing feedback on the 3D physics.
-- **Vite Team**: For making development feel like magic.
-- **Framer Motion Team**: For giving us the power of physics in the browser.
-- **Every Developer**: Who has ever sent a digital birthday card.
 
 ---
 
