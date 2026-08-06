@@ -1,12 +1,11 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { createPortal } from "react-dom";
-import { Cake as CakeIcon, Flame, Sparkles } from "lucide-react";
 import { useConfetti } from "./Confetti";
 import { useSoundManager } from "./SoundManager";
 import { KineticText } from "./KineticText";
 import { useBirthdayStore } from "@/features/core/store/useBirthdayStore";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion, type Transition } from "framer-motion";
 type Phase = "select" | "blow-intro" | "blowing" | "wish" | "countdown" | "knife-enter" | "cutting" | "burst" | "quotes";
 const CAKE_OPTIONS = [
     {
@@ -99,11 +98,7 @@ const CakeSVG = ({ cake, split, candlesLit, name, springConfig }: {
     split: boolean;
     candlesLit: boolean;
     name: string;
-    springConfig?: {
-        type: string;
-        stiffness: number;
-        damping: number;
-    };
+    springConfig?: Transition;
 }) => (<motion.div animate={{ rotateX: split ? 25 : 8, rotateY: split ? 5 : 0, scale: split ? 1.15 : 1 }} transition={springConfig ?? { type: "spring", stiffness: 80, damping: 12 }} className="relative preserve-3d" style={{ perspective: "1500px" }}>
     <svg viewBox="0 0 200 200" className="w-64 sm:w-80 md:w-[32rem] mx-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]">
       <defs>
@@ -244,9 +239,8 @@ const KnifeSVG = ({ phase }: {
     </svg>
   </motion.div>);
 };
-const CakeCard = ({ cake, index, onSelect }: {
+const CakeCard = ({ cake, onSelect }: {
     cake: CakeOption;
-    index: number;
     onSelect: () => void;
 }) => {
     const isMobile = useIsMobile();
@@ -283,6 +277,7 @@ const CINEMATIC_TIMINGS = {
     knifeEnter: 1200,
     cutting: 800,
     burst: 1200,
+    pauseBeforeTransition: 10000, // 10 detik jeda sebelum transisi
 };
 export const CakeCutting = () => {
     const isMobile = useIsMobile();
@@ -292,7 +287,7 @@ export const CakeCutting = () => {
     const [candlesLit, setCandlesLit] = useState(true);
     const [quoteIndex, setQuoteIndex] = useState(-1);
     const [countdownVal, setCountdownVal] = useState<number | string>("");
-    const { fireCannon, fireCinematicCelebration } = useConfetti();
+    const { fireCinematicCelebration } = useConfetti();
     const { playBoom, playReveal, playPop, playWhoosh } = useSoundManager();
     const { name, relationship, gender, favoriteColor } = useBirthdayStore(state => state.config);
     const primaryColor = favoriteColor || '#FF6B6B';
@@ -301,11 +296,11 @@ export const CakeCutting = () => {
         const isFemale = gender === 'female';
         if (relationship === 'partner')
             return [
-                { text: `${isFemale ? 'Putri' : isMale ? 'Pangeranku' : 'Kekasihku'} tersayang...`, animation: "zoom-in" as const },
-                { text: "Aku sangat bangga padamu...", animation: "float" as const },
+                { text: `${isFemale ? 'Putri cantikku' : isMale ? 'Pangeran hatiku' : 'Cinta sejatiku'}...`, animation: "zoom-in" as const },
+                { text: "Aku jatuh cinta lagi dengan perjuanganmu...", animation: "float" as const },
                 { text: "Kamu luar biasa, S.Ak.!", animation: "pop-out" as const },
-                { text: "Selamat lulus sidang Cintaku!", animation: "typewriter-burst" as const },
-                { text: `Selamanya Bersamamu`, animation: "pop-out" as const },
+                { text: "Selamat lulus sidang sayangku!", animation: "typewriter-burst" as const },
+                { text: `Selamanya Bersamamu ❤️`, animation: "pop-out" as const },
             ];
         if (relationship === 'friend')
             return [
@@ -378,7 +373,7 @@ export const CakeCutting = () => {
         setTimeout(() => {
             setPhase("quotes");
             setQuoteIndex(0);
-        }, quotesDelay);
+        }, quotesDelay + CINEMATIC_TIMINGS.pauseBeforeTransition);
     }, [phase, fireCinematicCelebration, playBoom, playReveal, playWhoosh, playPop]);
     useEffect(() => {
         if (phase !== "select") {
@@ -402,7 +397,7 @@ export const CakeCutting = () => {
     const lowMotion = isMobile || reduceMotion;
     const dustCount = isMobile ? 16 : 40;
     const sparkCount = isMobile ? 16 : 30;
-    const cakeSpring = { type: "spring", stiffness: isMobile ? 45 : 80, damping: isMobile ? 20 : 12 };
+    const cakeSpring = { type: "spring" as const, stiffness: isMobile ? 45 : 80, damping: isMobile ? 20 : 12 };
     return (<>
       {createPortal(<AnimatePresence>
           {phase !== "select" && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] flex flex-col items-center justify-start md:justify-center backdrop-blur-2xl overflow-y-auto overscroll-none py-10 md:py-8" style={{
@@ -414,11 +409,11 @@ export const CakeCutting = () => {
 
                 {(phase === "blow-intro" || phase === "blowing") && (<motion.div initial={{ scale: 0.8, opacity: 0, rotateX: 45 }} animate={{ scale: 1, opacity: 1, rotateX: 0 }} className="flex flex-col items-center gap-12">
                     <h2 className="font-display text-3xl sm:text-4xl text-white font-black text-center tracking-tighter animate-glow-pulse">
-                      Buat Harapan & Tiup Lilin
+                      Buat Harapan Romantis & Tiup Lilin Bersama 💕
                     </h2>
                     <CakeSVG cake={cake} split={false} candlesLit={candlesLit} name={name} springConfig={cakeSpring}/>
                     {phase === "blow-intro" && (<motion.button whileHover={!lowMotion ? { scale: 1.1 } : undefined} whileTap={{ scale: 0.9 }} onClick={handleBlow} className="group relative px-12 py-5 rounded-full text-xl font-black text-white overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.2)]" style={{ background: "linear-gradient(90deg, #ff0080, #7928ca)" }}>
-                        <span className="relative z-10">Tiup Sekarang</span>
+                        <span className="relative z-10">Tiup Dengan Cinta ❤️</span>
                         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"/>
                       </motion.button>)}
                   </motion.div>)}
@@ -429,10 +424,10 @@ export const CakeCutting = () => {
                       <motion.div animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity }} className="absolute inset-0 rounded-full bg-white/10 blur-3xl"/>
                     </div>
                     <div className="text-center">
-                      <h2 className="font-display text-4xl sm:text-6xl font-black bg-gradient-to-r from-yellow-200 via-white to-yellow-200 bg-clip-text text-transparent drop-shadow-2xl">
-                        Harapanmu Dikirim ke Langit
+                      <h2 className="font-display text-4xl sm:text-6xl font-black bg-gradient-to-r from-pink-300 via-rose-300 to-red-300 bg-clip-text text-transparent drop-shadow-2xl">
+                        Harapan Cinta Kita Terkirim ke Langit 💫
                       </h2>
-                      <p className="text-white/60 text-xl mt-4 font-light italic">Tunggu momen magis...</p>
+                      <p className="text-white/60 text-xl mt-4 font-light italic">Tunggu momen magis kita...</p>
                     </div>
                   </motion.div>)}
 
@@ -486,15 +481,15 @@ export const CakeCutting = () => {
 
       <div id="cake-section" className="relative z-20 py-16 sm:py-32 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="font-display text-4xl sm:text-6xl md:text-8xl font-black mb-6 bg-gradient-to-b from-white to-white/20 bg-clip-text text-transparent">
-            PILIH KUE PERAYAANMU
+          <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="font-display text-4xl sm:text-6xl md:text-8xl font-black mb-6 bg-gradient-to-b from-pink-300 via-rose-300 to-white/20 bg-clip-text text-transparent">
+            PILIH KUE UNTUK CINTA HIDUPKU 💕
           </motion.h3>
           <p className="text-white/40 text-lg sm:text-xl mb-12 sm:mb-20 max-w-2xl mx-auto font-light tracking-widest uppercase">
-            Karya Seni untuk Orang Istimewa
+            Kue Spesial untuk Orang Istimewa
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
-            {CAKE_OPTIONS.map((c, i) => (<CakeCard key={c.id} cake={c} index={i} onSelect={() => handleSelectCake(c)}/>))}
+            {CAKE_OPTIONS.map((c) => (<CakeCard key={c.id} cake={c} onSelect={() => handleSelectCake(c)}/>))}
           </div>
         </div>
       </div>

@@ -6,32 +6,32 @@
 
 @layer base {
   :root {
-    --background: 280 60% 8%;
-    --foreground: 45 100% 95%;
-    --card: 280 40% 12%;
-    --card-foreground: 45 100% 95%;
-    --popover: 280 40% 12%;
-    --popover-foreground: 45 100% 95%;
-    --primary: 330 85% 60%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 270 60% 55%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 280 30% 20%;
-    --muted-foreground: 280 10% 70%;
-    --accent: 45 100% 60%;
-    --accent-foreground: 280 60% 8%;
+    --background: 340 40% 8%;
+    --foreground: 340 20% 98%;
+    --card: 340 35% 12%;
+    --card-foreground: 340 20% 98%;
+    --popover: 340 35% 12%;
+    --popover-foreground: 340 20% 98%;
+    --primary: 330 90% 75%;
+    --primary-foreground: 340 40% 8%;
+    --secondary: 315 80% 85%;
+    --secondary-foreground: 340 40% 8%;
+    --muted: 340 25% 20%;
+    --muted-foreground: 340 15% 75%;
+    --accent: 320 100% 85%;
+    --accent-foreground: 340 40% 8%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 280 30% 25%;
-    --input: 280 30% 25%;
-    --ring: 330 85% 60%;
-    --radius: 0.75rem;
-    --birthday-pink: 330 85% 60%;
-    --birthday-purple: 270 60% 55%;
-    --birthday-gold: 45 100% 60%;
-    --birthday-sky: 200 80% 60%;
-    --birthday-coral: 15 85% 65%;
-    --birthday-mint: 160 60% 55%;
+    --border: 340 30% 25%;
+    --input: 340 30% 25%;
+    --ring: 330 90% 75%;
+    --radius: 1.5rem;
+    --birthday-pink: 330 90% 75%;
+    --birthday-purple: 315 70% 82%;
+    --birthday-gold: 45 90% 85%;
+    --birthday-sky: 200 75% 85%;
+    --birthday-coral: 350 85% 80%;
+    --birthday-mint: 160 55% 80%;
   }
 
   * {
@@ -62,7 +62,7 @@
     inset: 0;
     z-index: 9998;
     pointer-events: none;
-    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.4) 100%);
+    background: radial-gradient(circle, transparent 30%, rgba(255, 182, 193, 0.3) 100%);
   }
 }
 
@@ -103,11 +103,11 @@
 
   0%,
   100% {
-    text-shadow: 0 0 20px hsl(330 85% 60% / 0.5), 0 0 40px hsl(330 85% 60% / 0.3);
+    text-shadow: 0 0 20px hsl(330 90% 70% / 0.6), 0 0 40px hsl(330 90% 70% / 0.4);
   }
 
   50% {
-    text-shadow: 0 0 40px hsl(330 85% 60% / 0.8), 0 0 80px hsl(330 85% 60% / 0.5), 0 0 120px hsl(45 100% 60% / 0.3);
+    text-shadow: 0 0 40px hsl(330 90% 70% / 0.9), 0 0 80px hsl(330 90% 70% / 0.6), 0 0 120px hsl(315 100% 75% / 0.4);
   }
 }
 

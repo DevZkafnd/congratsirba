@@ -84,7 +84,7 @@ body {
   background: radial-gradient(
     ellipse at center,
     transparent 0%,
-    rgba(0, 0, 0, 0.3) 100%
+    rgba(255, 182, 193, 0.15) 100%
   );
   pointer-events: none;
   z-index: 10;
@@ -106,10 +106,10 @@ body {
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+    box-shadow: 0 0 15px rgba(244, 167, 199, 0.6);
   }
   50% {
-    box-shadow: 0 0 30px rgba(255, 107, 107, 0.8);
+    box-shadow: 0 0 35px rgba(244, 167, 199, 0.9);
   }
 }
 

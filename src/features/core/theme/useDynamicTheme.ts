@@ -45,8 +45,8 @@ export const useDynamicTheme = () => {
         root.style.setProperty('--color-primary-low', `hsl(${h}, ${s}%, ${l * 0.5}%)`);
         root.style.setProperty('--color-primary-glow', `hsl(${h}, ${s}%, ${l}%, 0.3)`);
         if (relationship === 'partner') {
-            root.style.setProperty('--bg-gradient', `radial-gradient(circle at 50% 50%, hsl(${h}, 40%, 12%) 0%, #050505 100%)`);
-            root.style.setProperty('--glow-effect', `0 0 50px hsl(${h}, 60%, 45%, 0.6)`);
+            root.style.setProperty('--bg-gradient', `radial-gradient(circle at 50% 50%, hsl(${h}, 35%, 18%) 0%, hsl(330, 20%, 10%) 100%)`);
+            root.style.setProperty('--glow-effect', `0 0 40px hsl(${h}, 50%, 60%, 0.5)`);
             root.style.setProperty('--glass-opacity', '0.08');
             root.style.setProperty('--font-display', '"Playfair Display", "Times New Roman", serif');
             root.style.setProperty('--animation-pacing', '2s');
@@ -54,17 +54,17 @@ export const useDynamicTheme = () => {
             root.style.setProperty('--card-radius', '3rem');
         }
         else if (relationship === 'friend') {
-            root.style.setProperty('--bg-gradient', `linear-gradient(135deg, hsl(${h}, 70%, 15%) 0%, #111111 100%)`);
-            root.style.setProperty('--glow-effect', `0 8px 30px hsl(${h}, 90%, 55%, 0.4)`);
-            root.style.setProperty('--glass-opacity', '0.15');
+            root.style.setProperty('--bg-gradient', `linear-gradient(135deg, hsl(${h}, 40%, 20%) 0%, hsl(330, 25%, 12%) 100%)`);
+            root.style.setProperty('--glow-effect', `0 8px 30px hsl(${h}, 70%, 70%, 0.4)`);
+            root.style.setProperty('--glass-opacity', '0.12');
             root.style.setProperty('--font-display', '"Inter", "Impact", sans-serif');
             root.style.setProperty('--animation-pacing', '0.8s');
             root.style.setProperty('--particle-speed', '2');
-            root.style.setProperty('--card-radius', '1.5rem');
+            root.style.setProperty('--card-radius', '2rem');
         }
         else {
-            root.style.setProperty('--bg-gradient', `linear-gradient(to bottom, hsl(${h}, 25%, 15%), #0a0a0a)`);
-            root.style.setProperty('--glow-effect', `0 0 30px hsl(${h}, 40%, 40%, 0.4)`);
+            root.style.setProperty('--bg-gradient', `linear-gradient(to bottom, hsl(${h}, 30%, 18%), hsl(330, 20%, 10%))`);
+            root.style.setProperty('--glow-effect', `0 0 30px hsl(${h}, 40%, 60%, 0.4)`);
             root.style.setProperty('--glass-opacity', '0.1');
             root.style.setProperty('--font-display', '"Outfit", sans-serif');
             root.style.setProperty('--animation-pacing', '1.2s');
@@ -72,9 +72,9 @@ export const useDynamicTheme = () => {
             root.style.setProperty('--card-radius', '2rem');
         }
         if (gender === 'female') {
-            root.style.setProperty('--glow-intensity', '1.2');
-            root.style.setProperty('--glass-blur', '25px');
-            root.style.setProperty('--color-accent-soft', `hsl(${h}, ${s * 0.8}%, ${l * 1.2}%)`);
+            root.style.setProperty('--glow-intensity', '1.3');
+            root.style.setProperty('--glass-blur', '30px');
+            root.style.setProperty('--color-accent-soft', `hsl(${h}, ${s * 0.9}%, ${l * 1.3}%)`);
         }
         else if (gender === 'male') {
             root.style.setProperty('--glow-intensity', '0.8');

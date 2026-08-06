@@ -16,7 +16,7 @@ export const FakeChatScene = ({ onComplete }: FakeChatSceneProps) => {
     const fullText = "Congrats sidangnyaa";
     const retypeFullText = useMemo(() => {
         if (relationship === 'partner')
-            return isMale ? "Sayang... aku bangga banget sama kamu ❤️" : isFemale ? "Sayangkuu... you did it beb!" : "My love... I'm so proud of you!";
+            return isMale ? "Sayang... kamu luar biasa banget, I love you so much ❤️" : isFemale ? "Sayangkuuu... aku bangga sama kamu beb! 💕" : "My love... kamu hebat banget!";
         if (relationship === 'friend')
             return "Eh tunggu... pesan biasa mah ngebosenin!";
         return "Ada yang special nih buat kamu...";
@@ -76,7 +76,7 @@ export const FakeChatScene = ({ onComplete }: FakeChatSceneProps) => {
                 bubbleOther: "rgba(255, 255, 255, 0.1)",
                 bubbleMe: `${primaryColor}40`,
                 icon: "💕",
-                status: "ngetik sesuatu yang special...",
+                status: "ngetik dengan sepenuh hati...",
             };
         if (relationship === 'friend')
             return {
@@ -122,11 +122,11 @@ export const FakeChatScene = ({ onComplete }: FakeChatSceneProps) => {
           
           <div className="px-8 py-10 min-h-[300px] flex flex-col justify-end gap-4">
             <motion.div initial={{ opacity: 0, x: -30, scale: 0.9 }} animate={{ opacity: 1, x: 0, scale: 1 }} className="self-start max-w-[85%] px-5 py-4 rounded-[1.5rem] rounded-bl-none text-base font-medium shadow-lg" style={{ background: theme.bubbleOther, color: "rgba(255,255,255,0.9)" }}>
-              {relationship === 'partner' ? "Bebbb! Aku dengerin katanya sidangnya lancar banget!" : relationship === 'friend' ? "Ciee yang udah S.Ak nih!" : "Haii! Ada kabar baik nih!"}
+              {relationship === 'partner' ? "Bebbb! Aku tau hari ini adalah hari yang kamu tunggu-tunggu! 💕" : relationship === 'friend' ? "Ciee yang udah S.Ak nih!" : "Haii! Ada kabar baik nih!"}
             </motion.div>
             
             <motion.div initial={{ opacity: 0, x: -30, scale: 0.9 }} animate={{ opacity: 1, x: 0, scale: 1 }} transition={{ delay: 0.5 }} className="self-start max-w-[85%] px-5 py-4 rounded-[1.5rem] rounded-bl-none text-base font-medium shadow-lg" style={{ background: theme.bubbleOther, color: "rgba(255,255,255,0.9)" }}>
-              {relationship === 'partner' ? "Aku tuh gatau gimana caranya ungkapin betapa bangganya aku sama kamu..." : relationship === 'friend' ? "Jadi... aku nyiapin sesuatu yang special buat kamu nih!" : "Aku ada surprise spesial nih buat kamu..."}
+              {relationship === 'partner' ? "Cintaku... aku gatau gimana caranya ungkapin betapa bangganya aku bisa jadi pacarmu..." : relationship === 'friend' ? "Jadi... aku nyiapin sesuatu yang special buat kamu nih!" : "Aku ada surprise spesial nih buat kamu..."}
             </motion.div>
 
             
@@ -161,7 +161,7 @@ export const FakeChatScene = ({ onComplete }: FakeChatSceneProps) => {
         <AnimatePresence>
           {(phase === "special") && (<motion.div initial={{ opacity: 0, y: 30, scale: 0.8, filter: "blur(10px)" }} animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }} exit={{ opacity: 0, scale: 1.2, filter: "blur(20px)" }} className="text-center mt-16 px-6">
               <p className="text-3xl md:text-4xl font-display font-black leading-tight bg-gradient-to-r from-white via-white/80 to-white/60 bg-clip-text text-transparent">
-                {relationship === 'partner' ? `Karena ${isFemale ? 'ratu' : isMale ? 'raja' : 'orang spesial'} kayak kamu layak dapet lebih dari sekedar kata-kata...` : relationship === 'friend' ? "Peringatan: Level keren-nya udah melampaui batas! ⚠️" : "Tapi kamu layak dapet sesuatu yang jauh lebih magical..."}
+                {relationship === 'partner' ? `Karena ${isFemale ? 'ratu hatiku' : isMale ? 'raja dalam hidupku' : 'cinta sejatiku'} layak dapet lebih dari kata-kata biasa...` : relationship === 'friend' ? "Peringatan: Level keren-nya udah melampaui batas! ⚠️" : "Tapi kamu layak dapet sesuatu yang jauh lebih magical..."}
               </p>
               <motion.div animate={{
                 scale: [1, 1.3, 1],
