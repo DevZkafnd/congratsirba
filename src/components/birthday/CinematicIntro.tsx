@@ -75,7 +75,7 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
         if (relationship === 'partner') {
             return [
                 "Hari ini adalah hari yang spesial...",
-                `Hari dimana seseorang yang istimewa meraih pencapaian luar biasa...`,
+                "Hari dimana seseorang yang istimewa meraih pencapaian luar biasa...",
                 isMale ? "Seseorang yang telah berjuang keras untuk mimpinya..." : isFemale ? "Sosok luar biasa yang akhirnya meraih gelar S.Ak..." : "Jiwa tangguh yang pantang menyerah...",
                 "Semua lembur ngitung debit-kredit...",
                 "Semua begadang ngerjain skripsi... akhirnya terbayar!"
@@ -83,19 +83,19 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
         }
         if (relationship === 'friend') {
             return [
-                "Perhatian! Seorang legenda telah naik level! 🚀",
-                "Dari mahasiswa biasa menjadi Sarjana Akuntansi! 🎓",
-                isFemale ? "Untuk perempuan luar biasa yang akhirnya lulus!" : isMale ? "Untuk pria hebat yang berhasil wisuda!" : "Untuk manusia super yang pantang menyerah!",
+                "Perhatian! Seorang legenda telah naik level!",
+                "Dari mahasiswa biasa menjadi Sarjana Akuntansi!",
+                isFemale ? "Untuk perempuan luar biasa yang akhirnya lulus sidang!" : isMale ? "Untuk pria hebat yang berhasil lulus sidang!" : "Untuk manusia super yang pantang menyerah!",
                 "Semua perjuangan kuliah, skripsi, dan sidang...",
-                "Akhirnya terbayar hari ini! 🎉"
+                "Akhirnya terbayar hari ini!"
             ];
         }
         return [
             "Hari ini adalah hari bersejarah...",
-            `Karena kita merayakan kelulusan ${isFemale ? 'Ratu' : isMale ? 'Raja' : 'Bintang'} kita!`,
+            `Karena kita merayakan kelulusan sidang ${isFemale ? 'Ratu' : isMale ? 'Raja' : 'Bintang'} kita!`,
             "Seseorang yang telah berjuang keras meraih gelarnya...",
             "Aku ingin membuat sesuatu yang istimewa untuk hari spesialmu...",
-            "Jadi, duduk santai dan nikmati kejutannya! ✨"
+            "Jadi, duduk santai dan nikmati kejutannya!"
         ];
     }, [relationship, gender]);
     const postChatLines = useMemo(() => {
@@ -127,21 +127,21 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
             return [
                 `Untuk ${name || (isFemale ? 'Putri' : isMale ? 'Pangeran' : 'Kekasihku')} tercinta`,
                 "Selamat atas pencapaian luar biasamu...",
-                "Gelar S.Ak. adalah awal dari kesuksesanmu ✨",
-                "Selamat Wisuda, Aku sangat bangga padamu! 💖"
+                "Gelar S.Ak. adalah awal dari kesuksesanmu",
+                "Selamat lulus sidang, Aku sangat bangga padamu!"
             ];
         if (relationship === 'friend')
             return [
-                `Selamat Wisuda ${name || (isFemale ? 'Bestie' : isMale ? 'Bro' : 'Legenda')}!`,
+                `Selamat lulus sidang ${name || (isFemale ? 'Bestie' : isMale ? 'Bro' : 'Legenda')}!`,
                 "Semoga karirmu secerah laporan keuanganmu yang balance!",
-                "Bangga punya teman seperjuangan sepertimu 🎉",
-                "Stay awesome, S.Ak.! 😎"
+                "Bangga punya teman seperjuangan sepertimu",
+                "Stay awesome, S.Ak.!"
             ];
         return [
             `Untuk ${name || 'Sosok Istimewa'}`,
-            "Kami semua ingin mengucapkan selamat atas kelulusanmu...",
-            "Semoga kesuksesanmu terus berlipat ganda ✨",
-            "Kami sangat bangga padamu! 💖"
+            "Kami semua ingin mengucapkan selamat atas lulus sidangmu...",
+            "Semoga kesuksesanmu terus berlipat ganda",
+            "Kami sangat bangga padamu!"
         ];
     }, [name, relationship, gender]);
     const primaryColor = favoriteColor || '#FF6B6B';
@@ -288,7 +288,7 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
                 <div className="flex justify-center mb-6"><HeartProgression stage={4}/></div>
                 <h1 className="font-display text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black mb-4 break-words leading-tight">
                   <span className="bg-gradient-to-r from-[var(--color-primary)] via-[hsl(45,100%,65%)] to-[hsl(200,80%,70%)] bg-clip-text text-transparent animate-gradient-shift">
-                    Selamat Wisuda
+                    Selamat Lulus Sidang
                   </span>
                 </h1>
                 <h2 className="font-display text-5xl sm:text-7xl md:text-9xl lg:text-[12rem] font-black text-foreground animate-glow-pulse mt-4 break-words">

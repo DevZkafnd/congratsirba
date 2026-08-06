@@ -193,7 +193,7 @@ export const MainBirthday = () => {
     return (<div onMouseMove={shouldAnimate ? handleMouseMove : undefined} className={`min-h-screen transition-opacity duration-1000 w-full max-w-[100vw] overflow-x-hidden ${visible ? "opacity-100" : "opacity-0"} ${megaSurprise ? "animate-screen-shake" : ""}`} style={{ background: 'transparent' }}>
       <Balloons count={balloonCount}/>
       <Sparkles count={sparkleCount}/>
-      <FloatingAccountingElements count={isMobile ? 12 : 20} />
+      <FloatingAccountingElements count={isMobile ? 8 : 12} />
 
       
       {megaSurprise && (<div className="fixed inset-0 z-[100] bg-white/20 backdrop-blur-sm pointer-events-none animate-flash flex items-center justify-center">
@@ -222,7 +222,7 @@ export const MainBirthday = () => {
 
         <motion.h1 variants={itemVariants} className="font-display text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-black mb-4 break-words leading-tight px-2">
           <span className="bg-gradient-to-r from-[var(--color-primary)] via-[hsl(45,100%,75%)] to-[hsl(200,80%,70%)] bg-clip-text text-transparent animate-gradient-shift drop-shadow-[0_4px_30px_rgba(255,255,255,0.3)]">
-            Selamat Wisuda
+            Selamat Lulus Sidang
           </span>
         </motion.h1>
 
@@ -289,7 +289,7 @@ export const MainBirthday = () => {
 
       
       <section className="relative z-20 px-4 pb-32">
-        <h3 className="font-display text-5xl md:text-8xl font-black text-center mb-20 drop-shadow-xl" style={{ color: primaryColor }}>Wishes for You ✨</h3>
+        <h3 className="font-display text-5xl md:text-8xl font-black text-center mb-20 drop-shadow-xl" style={{ color: primaryColor }}>Wishes for You</h3>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           {bigWishes.map((item, i) => (<motion.div key={i} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }} whileHover={!isMobile ? { y: -15, scale: 1.03, rotate: i % 2 === 0 ? 1 : -1, boxShadow: `0 30px 60px -15px ${primaryColor}40` } : undefined} className="p-10 backdrop-blur-3xl border cursor-pointer group bg-gradient-to-br from-white/10 to-transparent border-white/10" style={{ borderRadius: 'var(--card-radius, 2.5rem)' }} onClick={addEmoji}>
               <div className="text-7xl mb-8 group-hover:scale-125 transition-transform duration-500">{item.emoji}</div>
@@ -385,16 +385,16 @@ export const MainBirthday = () => {
       {config.showCakeSection && (<section id="cake-section" className="relative z-20 px-4 pb-16 sm:pb-32">
         <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "0px" }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }} className="text-center">
           <h3 className="font-display text-4xl sm:text-6xl md:text-7xl font-black mb-8 sm:mb-12 drop-shadow-xl" style={{ color: primaryColor }}>
-            Rayakan Kelulusanmu! 🎓
+            Rayakan Kelulusanmu
           </h3>
           <p className="text-xl sm:text-2xl md:text-3xl text-foreground/80 mb-10 sm:mb-12 max-w-2xl mx-auto">
-            Saatnya merayakan pencapaian luar biasamu! ✨
+            Saatnya merayakan pencapaian luar biasamu!
           </p>
           <motion.button whileHover={shouldAnimate ? { scale: 1.05 } : undefined} whileTap={{ scale: 0.95 }} onClick={() => { addEmoji(); scrollToCake(); }} className="px-10 py-5 sm:px-12 sm:py-6 rounded-full text-xl sm:text-2xl font-black text-white shadow-2xl mb-12 sm:mb-20" style={{
                 background: `linear-gradient(135deg, ${primaryColor}, ${primaryColor}dd)`,
                 boxShadow: `0 15px 45px -10px ${primaryColor}60`
             }}>
-            🎓 Mulai Perayaan
+            Mulai Perayaan
           </motion.button>
           <CakeCutting />
         </motion.div>

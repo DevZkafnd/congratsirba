@@ -304,23 +304,23 @@ export const CakeCutting = () => {
                 { text: `${isFemale ? 'Putri' : isMale ? 'Pangeranku' : 'Kekasihku'} tersayang...`, animation: "zoom-in" as const },
                 { text: "Aku sangat bangga padamu...", animation: "float" as const },
                 { text: "Kamu luar biasa, S.Ak.!", animation: "pop-out" as const },
-                { text: "Selamat Wisuda Cintaku! ❤️", animation: "typewriter-burst" as const },
-                { text: `Selamanya Bersamamu ✨`, animation: "pop-out" as const },
+                { text: "Selamat lulus sidang Cintaku!", animation: "typewriter-burst" as const },
+                { text: `Selamanya Bersamamu`, animation: "pop-out" as const },
             ];
         if (relationship === 'friend')
             return [
                 { text: `Yo ${name || 'Legenda'}!`, animation: "pop-out" as const },
-                { text: "Siap jadi sarjana keren? 😂", animation: "zoom-in" as const },
+                { text: "Siap jadi sarjana keren?", animation: "zoom-in" as const },
                 { text: "Semoga karirmu cerah!", animation: "stagger-up" as const },
-                { text: "Selamat Wisuda Bestie!", animation: "typewriter-burst" as const },
-                { text: `Bangga banget sama kamu! 🎉`, animation: "float" as const },
+                { text: "Selamat lulus sidang Bestie!", animation: "typewriter-burst" as const },
+                { text: `Bangga banget sama kamu!`, animation: "float" as const },
             ];
         return [
             { text: `Untuk ${isFemale ? 'Ratu' : isMale ? 'Raja' : 'Manusia Favorit'} kami...`, animation: "zoom-in" as const },
             { text: "Seseorang yang luar biasa", animation: "pop-out" as const },
             { text: "Semoga hari ini spesial untukmu", animation: "stagger-up" as const },
-            { text: "Selamat Wisuda!", animation: "typewriter-burst" as const },
-            { text: `Tetap bersinar selalu ✨`, animation: "float" as const },
+            { text: "Selamat lulus sidang!", animation: "typewriter-burst" as const },
+            { text: `Tetap bersinar selalu`, animation: "float" as const },
         ];
     }, [name, relationship, gender]);
     const handleSelectCake = useCallback((cake: CakeOption) => {
@@ -414,11 +414,11 @@ export const CakeCutting = () => {
 
                 {(phase === "blow-intro" || phase === "blowing") && (<motion.div initial={{ scale: 0.8, opacity: 0, rotateX: 45 }} animate={{ scale: 1, opacity: 1, rotateX: 0 }} className="flex flex-col items-center gap-12">
                     <h2 className="font-display text-3xl sm:text-4xl text-white font-black text-center tracking-tighter animate-glow-pulse">
-                      ✨ BUAT HARAPAN & TIUP LILIN ✨
+                      Buat Harapan & Tiup Lilin
                     </h2>
                     <CakeSVG cake={cake} split={false} candlesLit={candlesLit} name={name} springConfig={cakeSpring}/>
                     {phase === "blow-intro" && (<motion.button whileHover={!lowMotion ? { scale: 1.1 } : undefined} whileTap={{ scale: 0.9 }} onClick={handleBlow} className="group relative px-12 py-5 rounded-full text-xl font-black text-white overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.2)]" style={{ background: "linear-gradient(90deg, #ff0080, #7928ca)" }}>
-                        <span className="relative z-10">🌬️ TIUP SEKARANG</span>
+                        <span className="relative z-10">Tiup Sekarang</span>
                         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"/>
                       </motion.button>)}
                   </motion.div>)}
@@ -430,7 +430,7 @@ export const CakeCutting = () => {
                     </div>
                     <div className="text-center">
                       <h2 className="font-display text-4xl sm:text-6xl font-black bg-gradient-to-r from-yellow-200 via-white to-yellow-200 bg-clip-text text-transparent drop-shadow-2xl">
-                        HARAPANMU DIKIRIM KE LANGIT
+                        Harapanmu Dikirim ke Langit
                       </h2>
                       <p className="text-white/60 text-xl mt-4 font-light italic">Tunggu momen magis...</p>
                     </div>

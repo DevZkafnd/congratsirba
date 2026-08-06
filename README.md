@@ -1,22 +1,22 @@
-# 🎓 Selamat Wisuda Irba Luthfiah, S.Ak! 🌸
+# Selamat Lulus Sidang Irba Luthfiah, S.Ak.
 
-Web ucapan wisuda interaktif dengan tema feminin dan akuntansi untuk merayakan kelulusan Irba Luthfiah dengan gelar Sarjana Akuntansi.
+Web ucapan lulus sidang interaktif dengan tema feminin dan akuntansi untuk merayakan kelulusan sidang Irba Luthfiah dengan gelar Sarjana Akuntansi.
 
-## ✨ Fitur
+## Fitur
 
-- 🎨 Desain feminin dengan warna pastel (pink, lavender, peach, gold)
-- 💼 Elemen dekoratif tema akuntansi (kalkulator, uang, grafik, toga)
-- 📸 Galeri foto dengan cutout transparan
-- 🎂 Interaksi kue perayaan
-- 💌 Pesan ucapan personal
-- 🎉 Animasi dan konfeti interaktif
-- 📱 Responsive untuk mobile dan desktop
+- Desain feminin dengan warna pastel (pink, lavender, peach, gold)
+- Elemen dekoratif tema akuntansi (kalkulator, uang, grafik, toga)
+- Galeri foto dengan cutout transparan
+- Interaksi kue perayaan
+- Pesan ucapan personal
+- Animasi clean dan smooth
+- Responsive untuk mobile dan desktop
 
-## 🚀 Deploy ke Vercel
+## Deploy ke Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/DevZkafnd/congratsirba)
 
-## 🛠️ Pengembangan Lokal
+## Pengembangan Lokal
 
 ```bash
 # Install dependencies
@@ -29,7 +29,7 @@ npm run dev
 npm run build
 ```
 
-## 🎨 Kustomisasi
+## Kustomisasi
 
 Edit file `.env.local` untuk mengubah personalisasi:
 
@@ -37,9 +37,9 @@ Edit file `.env.local` untuk mengubah personalisasi:
 VITE_BIRTHDAY_NAME=Irba Luthfiah
 VITE_BIRTHDAY_GENDER=female
 VITE_THEME_COLOR=#f4a7c7
-VITE_BIRTHDAY_CUSTOM_MESSAGE=Selamat menyandang gelar Sarjana Akuntansi!
+VITE_BIRTHDAY_CUSTOM_MESSAGE=Selamat lulus sidang dan menyandang gelar Sarjana Akuntansi!
 ```
 
-## 📝 Lisensi
+## Lisensi
 
-Dibuat dengan ❤️ untuk Irba Luthfiah
+Dibuat untuk Irba Luthfiah
