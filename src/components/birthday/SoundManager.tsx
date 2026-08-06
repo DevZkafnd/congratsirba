@@ -1,12 +1,17 @@
 import { useCallback, useRef, useEffect } from "react";
 import { AUDIO_ASSETS } from "@/config/birthday";
+
+// Audio dari direct link GitHub raw atau hosting yang reliable
+// Kamu bisa upload audio ke GitHub repo lalu ambil raw link nya
 const AUDIO_URLS = {
-    bgMusic: AUDIO_ASSETS.bgmUrl || "https://cdn.pixabay.com/audio/2024/09/03/audio_73147814c8.mp3",
-    typeClick: "https://www.soundjay.com/communication/sounds/typing-on-computer-keyboard-01.mp3",
-    whoosh: "https://cdn.pixabay.com/audio/2022/03/24/audio_1c5e3e06.mp3",
-    reveal: "https://cdn.pixabay.com/audio/2021/08/04/audio_bb630cc098.mp3",
-    pop: "https://cdn.pixabay.com/audio/2022/03/15/audio_c8c836a148.mp3",
-    boom: "https://cdn.pixabay.com/audio/2022/03/10/audio_783d4a0231.mp3",
+    // Temporary: Gunakan audio dari freesound atau upload sendiri ke GitHub
+    // Contoh: https://raw.githubusercontent.com/username/repo/main/audio/bgmusic.mp3
+    bgMusic: AUDIO_ASSETS.bgmUrl || "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3", // Music romantic
+    typeClick: "https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3",
+    whoosh: "https://assets.mixkit.co/sfx/preview/mixkit-air-woosh-1489.mp3",
+    reveal: "https://assets.mixkit.co/sfx/preview/mixkit-magical-coin-win-1936.mp3",
+    pop: "https://assets.mixkit.co/sfx/preview/mixkit-balloon-pop-2061.mp3",
+    boom: "https://assets.mixkit.co/sfx/preview/mixkit-small-fireworks-explosion-1699.mp3",
 };
 class AudioManager {
     private bgMusic: HTMLAudioElement | null = null;
@@ -20,19 +25,26 @@ class AudioManager {
     }
     private playBgMusic() {
         try {
+            // Skip jika tidak ada URL
+            if (!AUDIO_URLS.bgMusic) {
+                console.debug("Background music URL kosong, skip playback");
+                return;
+            }
+            
             this.bgMusic = new Audio(AUDIO_URLS.bgMusic);
             this.bgMusic.loop = true;
             this.bgMusic.volume = 0.25;
-            this.bgMusic.play().catch(() => {
+            this.bgMusic.play().catch((err) => {
+                console.debug("Autoplay failed or blocked:", err);
                 const playOnInteraction = () => {
-                    this.bgMusic?.play();
+                    this.bgMusic?.play().catch(() => {});
                     document.removeEventListener('click', playOnInteraction);
                 };
                 document.addEventListener('click', playOnInteraction);
             });
         }
         catch (e) {
-            console.debug("Autoplay failed or blocked:", e);
+            console.debug("Audio initialization failed:", e);
         }
     }
     fadeOutBgMusic(duration = 2000) {
@@ -59,6 +71,11 @@ class AudioManager {
     }
     playEffect(type: "typeClick" | "whoosh" | "reveal" | "pop" | "boom", volume = 0.4) {
         try {
+            // Skip jika tidak ada URL
+            if (!AUDIO_URLS[type]) {
+                return;
+            }
+            
             const audio = new Audio(AUDIO_URLS[type]);
             audio.volume = volume;
             audio.play().catch(() => { });
