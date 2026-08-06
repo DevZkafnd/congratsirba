@@ -74,28 +74,28 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
         const isFemale = gender === 'female';
         if (relationship === 'partner') {
             return [
-                "There's someone who has been the center of my world...",
-                `Someone who makes every second feel like a movie scene...`,
-                isMale ? "The man who redefined what strength and kindness mean to me..." : isFemale ? "The woman whose grace and beauty light up every room she enters..." : "The soul who makes me believe in magic every single day...",
-                "I could have just texted 'I love you'...",
-                "But a simple message could never hold all that I feel for you."
+                "Hari ini adalah hari yang spesial...",
+                `Hari dimana seseorang yang istimewa meraih pencapaian luar biasa...`,
+                isMale ? "Seseorang yang telah berjuang keras untuk mimpinya..." : isFemale ? "Sosok luar biasa yang akhirnya meraih gelar S.Ak..." : "Jiwa tangguh yang pantang menyerah...",
+                "Semua lembur ngitung debit-kredit...",
+                "Semua begadang ngerjain skripsi... akhirnya terbayar!"
             ];
         }
         if (relationship === 'friend') {
             return [
-                "Alert! A legend has reached another level! 🚀",
-                "Wait, is it actually your birthday? Or is the calendar just lying? 😂",
-                isMale ? "To the guy who is responsible for 99% of my bad decisions..." : isFemale ? "To the girl who is basically the CEO of making me laugh..." : "To the human who is definitely too cool for this planet...",
-                "I thought about getting you a sensible gift...",
-                "But then I remembered... that's just not our style! 😎"
+                "Perhatian! Seorang legenda telah naik level! 🚀",
+                "Dari mahasiswa biasa menjadi Sarjana Akuntansi! 🎓",
+                isFemale ? "Untuk perempuan luar biasa yang akhirnya lulus!" : isMale ? "Untuk pria hebat yang berhasil wisuda!" : "Untuk manusia super yang pantang menyerah!",
+                "Semua perjuangan kuliah, skripsi, dan sidang...",
+                "Akhirnya terbayar hari ini! 🎉"
             ];
         }
         return [
-            "Today is a day that belongs to history...",
-            `Because we are celebrating the ${isMale ? 'King' : isFemale ? 'Queen' : 'Icon'} of the family!`,
-            "Someone whose presence is a gift to every single one of us...",
-            "I wanted to build something that lasts as long as the memories we share...",
-            "So, sit back, relax, and enjoy the show! ✨"
+            "Hari ini adalah hari bersejarah...",
+            `Karena kita merayakan kelulusan ${isFemale ? 'Ratu' : isMale ? 'Raja' : 'Bintang'} kita!`,
+            "Seseorang yang telah berjuang keras meraih gelarnya...",
+            "Aku ingin membuat sesuatu yang istimewa untuk hari spesialmu...",
+            "Jadi, duduk santai dan nikmati kejutannya! ✨"
         ];
     }, [relationship, gender]);
     const postChatLines = useMemo(() => {
@@ -125,23 +125,23 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
         const isFemale = gender === 'female';
         if (relationship === 'partner')
             return [
-                `My dearest ${name || (isMale ? 'Prince' : isFemale ? 'Princess' : 'Love')}`,
-                "I hope you felt the heartbeat behind every animation...",
-                "You are my today, my tomorrow, and my always ✨",
-                "Happy Birthday, I love you infinitely! 💖"
+                `Untuk ${name || (isFemale ? 'Putri' : isMale ? 'Pangeran' : 'Kekasihku')} tercinta`,
+                "Selamat atas pencapaian luar biasamu...",
+                "Gelar S.Ak. adalah awal dari kesuksesanmu ✨",
+                "Selamat Wisuda, Aku sangat bangga padamu! 💖"
             ];
         if (relationship === 'friend')
             return [
-                `Happy Birthday ${name || (isMale ? 'Bro' : isFemale ? 'Bestie' : 'Legend')}!`,
-                "May your day be filled with cake, chaos, and zero regrets!",
-                "I'm so lucky to have a partner-in-crime like you 🎉",
-                "Stay legendary! 😎"
+                `Selamat Wisuda ${name || (isFemale ? 'Bestie' : isMale ? 'Bro' : 'Legenda')}!`,
+                "Semoga karirmu secerah laporan keuanganmu yang balance!",
+                "Bangga punya teman seperjuangan sepertimu 🎉",
+                "Stay awesome, S.Ak.! 😎"
             ];
         return [
-            `Dear ${name || 'Wonderful Human'}`,
-            "We all wanted to wish you a year of pure happiness...",
-            "May your kindness always come back to you tenfold ✨",
-            "We love you so much! 💖"
+            `Untuk ${name || 'Sosok Istimewa'}`,
+            "Kami semua ingin mengucapkan selamat atas kelulusanmu...",
+            "Semoga kesuksesanmu terus berlipat ganda ✨",
+            "Kami sangat bangga padamu! 💖"
         ];
     }, [name, relationship, gender]);
     const primaryColor = favoriteColor || '#FF6B6B';
@@ -288,7 +288,7 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
                 <div className="flex justify-center mb-6"><HeartProgression stage={4}/></div>
                 <h1 className="font-display text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black mb-4 break-words leading-tight">
                   <span className="bg-gradient-to-r from-[var(--color-primary)] via-[hsl(45,100%,65%)] to-[hsl(200,80%,70%)] bg-clip-text text-transparent animate-gradient-shift">
-                    Happy Birthday
+                    Selamat Wisuda
                   </span>
                 </h1>
                 <h2 className="font-display text-5xl sm:text-7xl md:text-9xl lg:text-[12rem] font-black text-foreground animate-glow-pulse mt-4 break-words">

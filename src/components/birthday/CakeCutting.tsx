@@ -301,26 +301,26 @@ export const CakeCutting = () => {
         const isFemale = gender === 'female';
         if (relationship === 'partner')
             return [
-                { text: `My ${isMale ? 'Prince' : isFemale ? 'Princess' : 'Everything'}...`, animation: "zoom-in" as const },
-                { text: "Make a wish for our future...", animation: "float" as const },
-                { text: "I love you to the stars and back", animation: "pop-out" as const },
-                { text: "Happy Birthday My Love! ❤️", animation: "typewriter-burst" as const },
-                { text: `Forever Yours ✨`, animation: "pop-out" as const },
+                { text: `${isFemale ? 'Putri' : isMale ? 'Pangeranku' : 'Kekasihku'} tersayang...`, animation: "zoom-in" as const },
+                { text: "Aku sangat bangga padamu...", animation: "float" as const },
+                { text: "Kamu luar biasa, S.Ak.!", animation: "pop-out" as const },
+                { text: "Selamat Wisuda Cintaku! ❤️", animation: "typewriter-burst" as const },
+                { text: `Selamanya Bersamamu ✨`, animation: "pop-out" as const },
             ];
         if (relationship === 'friend')
             return [
-                { text: `Yo ${name || 'Legend'}!`, animation: "pop-out" as const },
-                { text: "Ready to get older but 0% wiser? 😂", animation: "zoom-in" as const },
-                { text: "Wishing you zero hangovers tomorrow!", animation: "stagger-up" as const },
-                { text: "Happy Birthday Bestie!", animation: "typewriter-burst" as const },
-                { text: `Let's make some noise! 🎉`, animation: "float" as const },
+                { text: `Yo ${name || 'Legenda'}!`, animation: "pop-out" as const },
+                { text: "Siap jadi sarjana keren? 😂", animation: "zoom-in" as const },
+                { text: "Semoga karirmu cerah!", animation: "stagger-up" as const },
+                { text: "Selamat Wisuda Bestie!", animation: "typewriter-burst" as const },
+                { text: `Bangga banget sama kamu! 🎉`, animation: "float" as const },
             ];
         return [
-            { text: `For our ${isMale ? 'King' : isFemale ? 'Queen' : 'Favorite Human'}...`, animation: "zoom-in" as const },
-            { text: "A truly wonderful soul", animation: "pop-out" as const },
-            { text: "May your day be magical", animation: "stagger-up" as const },
-            { text: "Happy Birthday!", animation: "typewriter-burst" as const },
-            { text: `Stay blessed always ✨`, animation: "float" as const },
+            { text: `Untuk ${isFemale ? 'Ratu' : isMale ? 'Raja' : 'Manusia Favorit'} kami...`, animation: "zoom-in" as const },
+            { text: "Seseorang yang luar biasa", animation: "pop-out" as const },
+            { text: "Semoga hari ini spesial untukmu", animation: "stagger-up" as const },
+            { text: "Selamat Wisuda!", animation: "typewriter-burst" as const },
+            { text: `Tetap bersinar selalu ✨`, animation: "float" as const },
         ];
     }, [name, relationship, gender]);
     const handleSelectCake = useCallback((cake: CakeOption) => {
@@ -414,11 +414,11 @@ export const CakeCutting = () => {
 
                 {(phase === "blow-intro" || phase === "blowing") && (<motion.div initial={{ scale: 0.8, opacity: 0, rotateX: 45 }} animate={{ scale: 1, opacity: 1, rotateX: 0 }} className="flex flex-col items-center gap-12">
                     <h2 className="font-display text-3xl sm:text-4xl text-white font-black text-center tracking-tighter animate-glow-pulse">
-                      ✨ MAKE A WISH & BLOW ✨
+                      ✨ BUAT HARAPAN & TIUP LILIN ✨
                     </h2>
                     <CakeSVG cake={cake} split={false} candlesLit={candlesLit} name={name} springConfig={cakeSpring}/>
                     {phase === "blow-intro" && (<motion.button whileHover={!lowMotion ? { scale: 1.1 } : undefined} whileTap={{ scale: 0.9 }} onClick={handleBlow} className="group relative px-12 py-5 rounded-full text-xl font-black text-white overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.2)]" style={{ background: "linear-gradient(90deg, #ff0080, #7928ca)" }}>
-                        <span className="relative z-10">🌬️ BLOW NOW</span>
+                        <span className="relative z-10">🌬️ TIUP SEKARANG</span>
                         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"/>
                       </motion.button>)}
                   </motion.div>)}
@@ -430,9 +430,9 @@ export const CakeCutting = () => {
                     </div>
                     <div className="text-center">
                       <h2 className="font-display text-4xl sm:text-6xl font-black bg-gradient-to-r from-yellow-200 via-white to-yellow-200 bg-clip-text text-transparent drop-shadow-2xl">
-                        WISH SENT TO THE STARS
+                        HARAPANMU DIKIRIM KE LANGIT
                       </h2>
-                      <p className="text-white/60 text-xl mt-4 font-light italic">Wait for the magical cut...</p>
+                      <p className="text-white/60 text-xl mt-4 font-light italic">Tunggu momen magis...</p>
                     </div>
                   </motion.div>)}
 
@@ -440,7 +440,7 @@ export const CakeCutting = () => {
                     <CakeSVG cake={cake} split={false} candlesLit={false} name={name} springConfig={cakeSpring}/>
                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm z-50 rounded-[2.5rem]">
                       <motion.span initial={{ opacity: 0, y: -10 }} animate={{ opacity: 0.5, y: 0 }} className="text-white/40 text-xs md:text-sm tracking-[0.3em] uppercase mb-4 font-bold">
-                        Prepare to cut...
+                        Bersiap memotong...
                       </motion.span>
                       <AnimatePresence mode="wait">
                         <motion.h1 key={countdownVal} initial={{ scale: 0.3, opacity: 0, filter: "blur(10px)" }} animate={{
@@ -487,10 +487,10 @@ export const CakeCutting = () => {
       <div id="cake-section" className="relative z-20 py-16 sm:py-32 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="font-display text-4xl sm:text-6xl md:text-8xl font-black mb-6 bg-gradient-to-b from-white to-white/20 bg-clip-text text-transparent">
-            CHOOSE YOUR CAKE
+            PILIH KUE PERAYAANMU
           </motion.h3>
           <p className="text-white/40 text-lg sm:text-xl mb-12 sm:mb-20 max-w-2xl mx-auto font-light tracking-widest uppercase">
-            A Masterpiece for every Masterpiece
+            Karya Seni untuk Orang Istimewa
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
