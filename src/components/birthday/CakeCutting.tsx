@@ -307,7 +307,7 @@ export const CakeCutting = () => {
                 { text: `Yo ${name || 'Legenda'}!`, animation: "pop-out" as const },
                 { text: "Siap jadi sarjana keren?", animation: "zoom-in" as const },
                 { text: "Semoga karirmu cerah!", animation: "stagger-up" as const },
-                { text: "Selamat lulus sidang Bestie!", animation: "typewriter-burst" as const },
+                { text: "Selamat lulus sidang!", animation: "typewriter-burst" as const },
                 { text: `Bangga banget sama kamu!`, animation: "float" as const },
             ];
         return [

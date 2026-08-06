@@ -132,7 +132,7 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
             ];
         if (relationship === 'friend')
             return [
-                `Selamat lulus sidang ${name || (isFemale ? 'Bestie' : isMale ? 'Bro' : 'Legenda')}!`,
+                `Selamat lulus sidang ${name || 'Teman'}!`,
                 "Semoga karirmu nanti secerah laporan keuangan yang balance!",
                 "Bangga banget punya temen seperjuangan kayak kamu",
                 "Keep shining, S.Ak.!"
@@ -191,7 +191,7 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
             addTimer(() => {
                 setScene("reveal-sequence");
                 setRevealStep("dear-name");
-            }, 6000 * speedMultiplier);
+            }, 16000 * speedMultiplier); // 6000 + 10000 jeda = 16000
         }
         if (scene === "reveal-sequence") {
             addTimer(() => {
