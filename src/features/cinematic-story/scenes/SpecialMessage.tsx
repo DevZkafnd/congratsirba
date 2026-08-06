@@ -12,7 +12,7 @@ export const SpecialMessage = () => {
             'font-sans font-medium text-white/80';
     return (<motion.div className="flex flex-col items-center justify-center min-h-screen text-center px-6 relative z-10" variants={variants.container} initial="hidden" animate="visible">
       <motion.h2 className={`text-4xl md:text-6xl mb-12 ${typographyClass}`} style={{ textShadow: 'var(--glow-effect)' }} variants={variants.item}>
-        For My {relationship === 'partner' ? (isMale ? 'Handsome King' : isFemale ? 'Beautiful Queen' : 'Everything') : relationship === 'friend' ? (isMale ? 'Legendary Brother' : isFemale ? 'Amazing Sister' : 'Bestie') : (name || 'You')},
+        Untuk {relationship === 'partner' ? (isMale ? 'Sayangku' : isFemale ? 'Bebku' : 'Cintaku') : relationship === 'friend' ? (isFemale ? 'Bestie' : isMale ? 'Bro' : 'Teman') : (name || 'Kamu')},
       </motion.h2>
 
       <div className="flex flex-wrap justify-center max-w-4xl gap-x-4 gap-y-3">

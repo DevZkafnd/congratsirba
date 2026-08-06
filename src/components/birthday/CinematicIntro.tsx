@@ -277,9 +277,9 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
 
         {scene === "reveal-sequence" && (<motion.div key="reveal" className="w-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             {revealStep === "dear-name" && (<motion.div initial={{ scale: 1.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 2, ease: "circOut" }} className="text-center px-4">
-                <p className="text-xl md:text-4xl text-muted-foreground mb-4 font-display italic">This is for you...</p>
+                <p className="text-xl md:text-4xl text-muted-foreground mb-4 font-display italic">Ini untukmu...</p>
                 <h2 className="font-display text-5xl sm:text-7xl md:text-9xl lg:text-[12rem] font-black animate-glow-pulse break-words leading-tight" style={{ color: primaryColor }}>
-                  <KineticText text={name || 'You'} animation="zoom-in" delay={600}/>
+                  <KineticText text={name || 'Kamu'} animation="zoom-in" delay={600}/>
                 </h2>
               </motion.div>)}
 

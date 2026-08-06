@@ -33,21 +33,21 @@ export const PhotoGallery = () => {
                 { src: PHOTO_ASSETS.photo3 || photo3Default, fallback: photo3Default, key: "p3" },
             ].filter(p => p.src !== null);
         const captions = relationship === 'partner' ? [
-            "Every moment with you is a gift 💖",
-            "Building our beautiful future ✨",
-            "My heart's favorite place 🌹"
+            "Setiap momen bersamamu adalah anugerah",
+            "Membangun masa depan bersama",
+            "Tempat favorit hatiku"
         ] : relationship === 'friend' ? [
-            "Legendary times with the MVP 🚀",
-            "Making memories and bad decisions! 😂",
-            "Stay epic, stay you! 🍻"
+            "Waktu-waktu seru bareng",
+            "Bikin kenangan yang gak terlupakan",
+            "Tetap jadi diri sendiri"
         ] : [
-            "Family is where life begins ✨",
-            "Cherishing every smile 💖",
-            "A journey filled with love 🌟"
+            "Keluarga adalah segalanya",
+            "Menghargai setiap senyuman",
+            "Perjalanan penuh cinta"
         ];
         return base.map((p, i) => ({
             ...p,
-            caption: config.photoCaptions?.[i] || captions[i] || "Beautiful memory",
+            caption: config.photoCaptions?.[i] || captions[i] || "Kenangan indah",
         }));
     }, [relationship, config.photos, config.photoCaptions]);
     const x = useMotionValue(0);

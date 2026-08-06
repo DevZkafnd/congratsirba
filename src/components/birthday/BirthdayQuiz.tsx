@@ -22,47 +22,47 @@ export const BirthdayQuiz = () => {
         const { name, interests, relationship, gender } = config;
         const base: Question[] = [
             {
-                q: `Who is the most legendary person born on this day?`,
-                options: ["Albert Einstein", "A Celebrity", name, "A Penguin"],
+                q: `Siapa orang paling keren yang lulus sidang hari ini?`,
+                options: ["Albert Einstein", "Selebriti", name, "Penguin"],
                 correct: 2,
-                reason: `Duh! It's obviously ${name}! Nobody else comes close.`
+                reason: `Jelas banget ${name}! Siapa lagi coba?`
             },
             {
-                q: `What is ${name}'s current mood today?`,
-                options: ["Sleepy", "Hungry", "Super OP & Legendary", "Bored"],
+                q: `Apa mood ${name} hari ini?`,
+                options: ["Ngantuk", "Lapar", "Super keren banget", "Bosan"],
                 correct: 2,
-                reason: "It's their birthday! They are in God Mode today."
+                reason: "Dia lagi seneng-senengnya hari ini!"
             }
         ];
         if (interests?.includes('car')) {
             base.push({
-                q: `If ${name} could have any car today, what would it be?`,
-                options: ["A Cycle", "A Supercar", "A Bus", "A Scooter"],
+                q: `Kalau ${name} bisa punya mobil apapun, itu apa?`,
+                options: ["Sepeda", "Mobil sport", "Bus", "Skuter"],
                 correct: 1,
-                reason: "Because legends drive fast!"
+                reason: "Karena orang keren butuh kendaraan keren!"
             });
         }
         if (relationship === 'partner') {
             base.push({
-                q: `Who loves ${name} the most in the entire universe?`,
-                options: ["The Cat", "Their Neighbor", "The Person Who Sent This Website", "A Martian"],
+                q: `Siapa yang paling sayang ${name} di seluruh alam semesta?`,
+                options: ["Kucingnya", "Tetangganya", "Orang yang kirim website ini", "Alien"],
                 correct: 2,
-                reason: "The person who sent this loves them more than stars in the sky."
+                reason: "Orang yang kirim ini sayang banget sama dia."
             });
         }
         if (interests?.includes('coding')) {
             base.push({
-                q: `What is ${name}'s biggest fear?`,
-                options: ["Spiders", "Heights", "A bug in production at 4 PM on a Friday", "Running out of coffee"],
+                q: `Apa ketakutan terbesar ${name}?`,
+                options: ["Laba-laba", "Ketinggian", "Bug production jam 4 sore Jumat", "Kopi habis"],
                 correct: 2,
-                reason: "Real coders know... bugs are the ultimate nightmare!"
+                reason: "Programmer asli tau... bug itu mimpi buruk!"
             });
         }
         base.push({
-            q: `If ${name} was a superhero, what would their name be?`,
-            options: ["Captain Sleep-A-Lot", "The Procrastinator", "Super Legendary Birthday Person", "Iron Coffee-Man"],
+            q: `Kalau ${name} jadi superhero, namanya apa?`,
+            options: ["Kapten Tidur", "Si Penunda", "Sarjana Super Keren", "Iron Coffee"],
             correct: 2,
-            reason: "Today, you're the hero we all need!"
+            reason: "Hari ini, kamu hero yang kita butuhkan!"
         });
         return base;
     }, [config]);
@@ -122,9 +122,9 @@ export const BirthdayQuiz = () => {
               </div>
             </div>
             
-            <h2 className="font-display text-4xl md:text-6xl font-black">LEGENDARY SCORE!</h2>
+            <h2 className="font-display text-4xl md:text-6xl font-black">SKOR KEREN!</h2>
             <p className="text-2xl md:text-3xl text-foreground/80">
-              You scored <span className="text-primary font-black">{score}/{questions.length}</span> on the {config.name} Trivia!
+              Skormu <span className="text-primary font-black">{score}/{questions.length}</span> di Trivia {config.name}!
             </p>
             
             <div className="flex justify-center gap-4 text-primary">

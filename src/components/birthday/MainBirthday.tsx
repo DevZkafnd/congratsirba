@@ -249,18 +249,18 @@ export const MainBirthday = () => {
           <div className="absolute top-0 right-0 p-8 opacity-10 text-9xl">✨</div>
           <div className="text-7xl text-center mb-10 animate-bounce">💌</div>
           <h3 className="font-display text-4xl md:text-6xl font-black text-center mb-12 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            {relationship === 'partner' ? "From My Heart" : relationship === 'friend' ? "Legendary Message" : "A Special Message"}
+            {relationship === 'partner' ? "Dari Hatiku" : relationship === 'friend' ? "Pesan Spesial" : "Pesan Untukmu"}
           </h3>
           <div className="space-y-10 text-center text-2xl md:text-3xl text-foreground/90 leading-relaxed">
-            <p className="font-display font-black text-3xl md:text-5xl" style={{ color: primaryColor }}>Dear {name},</p>
+            <p className="font-display font-black text-3xl md:text-5xl" style={{ color: primaryColor }}>Untuk {name},</p>
             {customMessage ? (<p className="italic font-light text-3xl md:text-5xl leading-tight">"{customMessage}"</p>) : (<div className="space-y-8">
-                <p>{mood === 'romantic' ? "My world is infinitely brighter because you are in it. Today is a celebration of the most beautiful soul I know." : mood === 'energetic' ? "You're not just older, you're better. A true legend deserves an epic day!" : "Today is a day of joy and gratitude as we celebrate you. You bring so much light into our lives."}</p>
-                <p className="text-xl md:text-2xl text-foreground/60">May this new chapter be your best one yet. ✨</p>
+                <p>{mood === 'romantic' ? "Duniaku jadi jauh lebih cerah karena kamu ada di dalamnya. Hari ini adalah perayaan untuk jiwa terindah yang aku kenal." : mood === 'energetic' ? "Kamu bukan cuma makin tua, tapi makin keren. Orang hebat pantas dapat hari yang spesial!" : "Hari ini adalah hari kebahagiaan dan syukur karena kita merayakan kamu. Kamu membawa banyak cahaya dalam hidup kami."}</p>
+                <p className="text-xl md:text-2xl text-foreground/60">Semoga chapter baru ini jadi yang terbaik untukmu.</p>
               </div>)}
             
             <div className="mt-12 p-8 bg-white/5 rounded-2xl border border-white/10 transition-transform duration-500 hover:scale-[1.02]">
-              <h4 className="font-display text-2xl md:text-4xl font-black mb-6 text-primary cursor-pointer" onDoubleClick={() => { fireCannon(); playBoom(); }} title="Double tap for a surprise!">
-                {config.letterTitle || "A Special Letter Just for You 💌"}
+              <h4 className="font-display text-2xl md:text-4xl font-black mb-6 text-primary cursor-pointer" onDoubleClick={() => { fireCannon(); playBoom(); }} title="Ketuk dua kali untuk kejutan!">
+                {config.letterTitle || "Surat Spesial Untukmu"}
               </h4>
               <div className="text-left text-lg md:text-xl leading-relaxed whitespace-pre-line font-light">
                 {config.letterOverride
@@ -289,7 +289,7 @@ export const MainBirthday = () => {
 
       
       <section className="relative z-20 px-4 pb-32">
-        <h3 className="font-display text-5xl md:text-8xl font-black text-center mb-20 drop-shadow-xl" style={{ color: primaryColor }}>Wishes for You</h3>
+        <h3 className="font-display text-5xl md:text-8xl font-black text-center mb-20 drop-shadow-xl" style={{ color: primaryColor }}>Harapan Untukmu</h3>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           {bigWishes.map((item, i) => (<motion.div key={i} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }} whileHover={!isMobile ? { y: -15, scale: 1.03, rotate: i % 2 === 0 ? 1 : -1, boxShadow: `0 30px 60px -15px ${primaryColor}40` } : undefined} className="p-10 backdrop-blur-3xl border cursor-pointer group bg-gradient-to-br from-white/10 to-transparent border-white/10" style={{ borderRadius: 'var(--card-radius, 2.5rem)' }} onClick={addEmoji}>
               <div className="text-7xl mb-8 group-hover:scale-125 transition-transform duration-500">{item.emoji}</div>
