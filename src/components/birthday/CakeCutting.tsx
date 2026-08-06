@@ -278,11 +278,11 @@ const CakeCard = ({ cake, index, onSelect }: {
 };
 const CINEMATIC_TIMINGS = {
     blowing: 1500,
-    wish: 3000,
-    countdown: 3000,
-    knifeEnter: 1500,
-    cutting: 1000,
-    burst: 1500,
+    wish: 2000,
+    countdown: 2000,
+    knifeEnter: 1200,
+    cutting: 800,
+    burst: 1200,
 };
 export const CakeCutting = () => {
     const isMobile = useIsMobile();

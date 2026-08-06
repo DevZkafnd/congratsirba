@@ -29,15 +29,12 @@ const Index = () => {
       
       <EmojiCursorTrail />
       <PremiumFireworks runKey={fireworksRunKey}/>
-      <FloatingElements />
-      <MorphingElements />
-      <EnhancedFloatingElements />
       <AnimatedGradient />
       {phase === "main" && (<>
-          <SparkleRain intensity={isMobile ? 8 : 15}/>
-          <FireflyEffect intensity={isMobile ? 7 : 12}/>
-          <FloatingOrbs count={isMobile ? 4 : 6}/>
-          <ShootingStars count={isMobile ? 4 : 8}/>
+          <FloatingElements />
+          <SparkleRain intensity={isMobile ? 5 : 10}/>
+          <FireflyEffect intensity={isMobile ? 5 : 8}/>
+          <FloatingOrbs count={isMobile ? 3 : 5}/>
         </>)}
 
       

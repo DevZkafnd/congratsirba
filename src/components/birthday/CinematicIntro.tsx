@@ -74,50 +74,50 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
         const isFemale = gender === 'female';
         if (relationship === 'partner') {
             return [
-                "Hari ini adalah hari yang spesial...",
-                "Hari dimana seseorang yang istimewa meraih pencapaian luar biasa...",
-                isMale ? "Seseorang yang telah berjuang keras untuk mimpinya..." : isFemale ? "Sosok luar biasa yang akhirnya meraih gelar S.Ak..." : "Jiwa tangguh yang pantang menyerah...",
-                "Semua lembur ngitung debit-kredit...",
+                "Hari ini special banget...",
+                "Hari dimana orang yang paling berarti buat aku meraih sesuatu yang luar biasa...",
+                isMale ? "Orang yang udah berjuang keras banget buat mimpinya..." : isFemale ? "Cewek luar biasa yang akhirnya dapet gelar S.Ak nya..." : "Jiwa yang tangguh dan pantang nyerah...",
+                "Semua malam-malam lembur ngitung debit-kredit...",
                 "Semua begadang ngerjain skripsi... akhirnya terbayar!"
             ];
         }
         if (relationship === 'friend') {
             return [
-                "Perhatian! Seorang legenda telah naik level!",
-                "Dari mahasiswa biasa menjadi Sarjana Akuntansi!",
-                isFemale ? "Untuk perempuan luar biasa yang akhirnya lulus sidang!" : isMale ? "Untuk pria hebat yang berhasil lulus sidang!" : "Untuk manusia super yang pantang menyerah!",
-                "Semua perjuangan kuliah, skripsi, dan sidang...",
+                "Alert! Ada yang naik level nih!",
+                "Dari mahasiswa biasa jadi Sarjana Akuntansi!",
+                isFemale ? "Buat cewek keren yang akhirnya lulus sidang!" : isMale ? "Buat cowok hebat yang berhasil lulus sidang!" : "Buat manusia super yang pantang nyerah!",
+                "Semua perjuangan kuliah, skripsi, sama sidang...",
                 "Akhirnya terbayar hari ini!"
             ];
         }
         return [
             "Hari ini adalah hari bersejarah...",
             `Karena kita merayakan kelulusan sidang ${isFemale ? 'Ratu' : isMale ? 'Raja' : 'Bintang'} kita!`,
-            "Seseorang yang telah berjuang keras meraih gelarnya...",
-            "Aku ingin membuat sesuatu yang istimewa untuk hari spesialmu...",
-            "Jadi, duduk santai dan nikmati kejutannya!"
+            "Orang yang udah berjuang keras buat meraih gelarnya...",
+            "Aku pengen bikin sesuatu yang special buat hari spesial kamu...",
+            "Jadi, duduk santai dan nikmatin kejutannya!"
         ];
     }, [relationship, gender]);
     const postChatLines = useMemo(() => {
         if (relationship === 'friend')
             return [
-                "Because you're not just any friend...",
-                "You're the person I can always count on for chaos and coffee! ☕️",
-                "You deserve something as epic and weird as our friendship...",
-                "So let's get this party started! 🎉",
+                "Soalnya kamu bukan cuma temen biasa...",
+                "Kamu tuh orang yang selalu bisa bikin hari-hari jadi seru!",
+                "Makanya kamu layak dapet yang terbaik...",
+                "Yuk kita rayakan pencapaianmu ini!",
             ];
         if (relationship === 'partner')
             return [
-                "But you are so much more than just a partner to me...",
-                "You are my safe haven, my greatest adventure, and my home.",
-                "I stayed up late, making sure every pixel was perfect... just like you.",
-                "Are you ready for the big reveal? ❤️",
+                "Karena kamu lebih dari sekedar pacar buat aku...",
+                "Kamu tuh rumahku, tempat aku pulang, everything.",
+                "Aku gatau gimana ngungkapinnya, tapi aku bangga banget...",
+                "Siap-siap ya buat kejutan selanjutnya!",
             ];
         return [
-            "You bring so much warmth into our lives...",
-            "You deserve a celebration as bright as your smile.",
-            "We put our hearts into this, just for you...",
-            "Let the celebration begin! ✨",
+            "Kamu tuh selalu bawa kehangatan dalam hidup kami...",
+            "Dan kamu layak banget dapet perayaan yang special.",
+            "Kami semua bangga banget sama kamu...",
+            "Ayo kita rayakan bareng-bareng!",
         ];
     }, [relationship]);
     const finalLines = useMemo(() => {
@@ -125,23 +125,23 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
         const isFemale = gender === 'female';
         if (relationship === 'partner')
             return [
-                `Untuk ${name || (isFemale ? 'Putri' : isMale ? 'Pangeran' : 'Kekasihku')} tercinta`,
-                "Selamat atas pencapaian luar biasamu...",
-                "Gelar S.Ak. adalah awal dari kesuksesanmu",
-                "Selamat lulus sidang, Aku sangat bangga padamu!"
+                `Buat ${name || (isFemale ? 'sayangku' : isMale ? 'pacarku' : 'cintaku')} tersayang`,
+                "Congrats banget yaa buat pencapaian luar biasanya...",
+                "Gelar S.Ak. nya tuh baru awal dari semua kesuksesan kamu nanti",
+                "Selamat lulus sidang sayang, aku bangga banget sama kamu!"
             ];
         if (relationship === 'friend')
             return [
                 `Selamat lulus sidang ${name || (isFemale ? 'Bestie' : isMale ? 'Bro' : 'Legenda')}!`,
-                "Semoga karirmu secerah laporan keuanganmu yang balance!",
-                "Bangga punya teman seperjuangan sepertimu",
-                "Stay awesome, S.Ak.!"
+                "Semoga karirmu nanti secerah laporan keuangan yang balance!",
+                "Bangga banget punya temen seperjuangan kayak kamu",
+                "Keep shining, S.Ak.!"
             ];
         return [
-            `Untuk ${name || 'Sosok Istimewa'}`,
-            "Kami semua ingin mengucapkan selamat atas lulus sidangmu...",
+            `Buat ${name || 'Orang Spesial'}`,
+            "Kami semua mau ngucapin selamat buat lulus sidangnya...",
             "Semoga kesuksesanmu terus berlipat ganda",
-            "Kami sangat bangga padamu!"
+            "Kami bangga banget sama kamu!"
         ];
     }, [name, relationship, gender]);
     const primaryColor = favoriteColor || '#FF6B6B';
