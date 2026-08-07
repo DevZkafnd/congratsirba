@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    /* Background putih dengan aksen soft pink */
-    --background: 0 0% 98%;
-    --foreground: 340 15% 25%;
+    /* Background dengan warna soft cream/beige untuk kontras lebih baik */
+    --background: 30 40% 96%;
+    --foreground: 340 70% 25%;
     --card: 0 0% 100%;
-    --card-foreground: 340 15% 25%;
+    --card-foreground: 340 70% 25%;
     --popover: 0 0% 100%;
-    --popover-foreground: 340 15% 25%;
+    --popover-foreground: 340 70% 25%;
     
-    /* Warna primary pink soft dan elegan */
-    --primary: 340 82% 65%;
+    /* Warna primary pink yang cerah dan visible */
+    --primary: 340 82% 52%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 330 45% 90%;
-    --secondary-foreground: 340 15% 25%;
-    --muted: 340 20% 95%;
-    --muted-foreground: 340 10% 45%;
+    --secondary: 330 45% 85%;
+    --secondary-foreground: 340 70% 25%;
+    --muted: 340 20% 92%;
+    --muted-foreground: 340 30% 35%;
     
-    /* Accent colors yang soft dan romantic */
-    --accent: 350 75% 70%;
+    /* Accent colors yang visible */
+    --accent: 350 75% 55%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 340 25% 92%;
-    --input: 340 25% 92%;
-    --ring: 340 82% 65%;
+    --border: 340 25% 88%;
+    --input: 340 25% 88%;
+    --ring: 340 82% 52%;
     --radius: 1.5rem;
     
-    /* Birthday colors - soft pastels */
-    --birthday-pink: 340 75% 75%;
-    --birthday-purple: 280 60% 80%;
-    --birthday-gold: 45 85% 75%;
-    --birthday-sky: 200 70% 80%;
-    --birthday-coral: 350 70% 75%;
-    --birthday-mint: 160 60% 80%;
+    /* Birthday colors - vibrant and visible */
+    --birthday-pink: 340 85% 60%;
+    --birthday-purple: 280 70% 65%;
+    --birthday-gold: 45 90% 55%;
+    --birthday-sky: 200 75% 60%;
+    --birthday-coral: 350 80% 60%;
+    --birthday-mint: 160 65% 60%;
     
-    /* Glow effects soft */
-    --glow-pink: 340 80% 70%;
-    --glow-purple: 280 65% 75%;
+    /* Glow effects */
+    --glow-pink: 340 85% 60%;
+    --glow-purple: 280 70% 65%;
   }
 
   * {
@@ -55,28 +55,53 @@
     overflow-x: hidden;
     position: relative;
     
-    /* Clean white background with soft gradient */
-    background: linear-gradient(to bottom, #ffffff 0%, #fef3f7 100%);
+    /* Soft cream/beige background untuk kontras lebih baik */
+    background: linear-gradient(to bottom, #fef6f0 0%, #fff5f5 100%);
   }
 
-  /* Decorative pink gradient borders on sides - elegant and simple */
+  /* Floral borders using SVG assets */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: 1;
+    z-index: 0;
     pointer-events: none;
-    background: 
-      linear-gradient(to right, rgba(251, 207, 232, 0.15) 0px, transparent 100px),
-      linear-gradient(to left, rgba(251, 207, 232, 0.15) 0px, transparent 100px);
-    background-position: left, right;
-    background-size: 100px 100%, 100px 100%;
-    background-repeat: no-repeat;
+    background-image: 
+      url('/assets/floral-border.svg'),
+      url('/assets/floral-border.svg');
+    background-position: left top, right top;
+    background-size: 80px auto, 80px auto;
+    background-repeat: repeat-y;
+    opacity: 0.4;
+  }
+  
+  /* Larger floral borders on desktop */
+  @media (min-width: 768px) {
+    body::before {
+      background-size: 120px auto, 120px auto;
+    }
   }
 
-  /* Remove paper texture - keep it clean */
+  /* Decorative side gradients for depth */
   body::after {
-    display: none;
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: 
+      radial-gradient(ellipse 150px 100% at left, rgba(251, 113, 133, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse 150px 100% at right, rgba(251, 113, 133, 0.08) 0%, transparent 50%);
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+  }
+  
+  @media (min-width: 768px) {
+    body::after {
+      background: 
+        radial-gradient(ellipse 200px 100% at left, rgba(251, 113, 133, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse 200px 100% at right, rgba(251, 113, 133, 0.08) 0%, transparent 50%);
+    }
   }
 }
 

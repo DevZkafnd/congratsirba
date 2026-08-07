@@ -25,7 +25,7 @@ const Index = () => {
     const isMobile = useIsMobile();
     const config = useBirthdayStore((state) => state.config);
     useDynamicTheme();
-    return (<div className="min-h-screen transition-colors duration-1000 relative overflow-hidden" style={{ background: '#fafafa' }}>
+    return (<div className="min-h-screen transition-colors duration-1000 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #fef6f0 0%, #fff5f5 100%)' }}>
       
       {/* All emoji and particle effects disabled for clean design */}
       <PremiumFireworks runKey={fireworksRunKey}/>
