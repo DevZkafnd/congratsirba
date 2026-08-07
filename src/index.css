@@ -59,7 +59,7 @@
     background: linear-gradient(to bottom, #fef6f0 0%, #fff5f5 100%);
   }
 
-  /* Floral borders using SVG assets */
+  /* Floral borders using SVG assets dengan mirror untuk right side */
   body::before {
     content: "";
     position: fixed;
@@ -70,15 +70,16 @@
       url('/assets/floral-border.svg'),
       url('/assets/floral-border.svg');
     background-position: left top, right top;
-    background-size: 80px auto, 80px auto;
+    background-size: 100px auto, 100px auto;
     background-repeat: repeat-y;
-    opacity: 0.4;
+    opacity: 0.7;
   }
   
-  /* Larger floral borders on desktop */
+  /* Mirror the right border */
   @media (min-width: 768px) {
     body::before {
-      background-size: 120px auto, 120px auto;
+      background-size: 150px auto, 150px auto;
+      opacity: 0.8;
     }
   }
 
@@ -90,8 +91,8 @@
     z-index: 0;
     pointer-events: none;
     background: 
-      radial-gradient(ellipse 150px 100% at left, rgba(251, 113, 133, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse 150px 100% at right, rgba(251, 113, 133, 0.08) 0%, transparent 50%);
+      radial-gradient(ellipse 180px 100% at left, rgba(251, 113, 133, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse 180px 100% at right, rgba(251, 113, 133, 0.12) 0%, transparent 50%);
     background-position: left center, right center;
     background-repeat: no-repeat;
   }
@@ -99,8 +100,8 @@
   @media (min-width: 768px) {
     body::after {
       background: 
-        radial-gradient(ellipse 200px 100% at left, rgba(251, 113, 133, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse 200px 100% at right, rgba(251, 113, 133, 0.08) 0%, transparent 50%);
+        radial-gradient(ellipse 250px 100% at left, rgba(251, 113, 133, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse 250px 100% at right, rgba(251, 113, 133, 0.15) 0%, transparent 50%);
     }
   }
 }

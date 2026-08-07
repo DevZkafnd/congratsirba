@@ -6,6 +6,8 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import photo1Default from "@/assets/photo-1.jpg";
 import photo2Default from "@/assets/photo-2.jpg";
 import photo3Default from "@/assets/photo-3.jpg";
+import photo4Default from "@/assets/photo-4.jpg";
+import photo5Default from "@/assets/photo-5.jpg";
 
 export const PhotoGallery = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -23,7 +25,7 @@ export const PhotoGallery = () => {
     const photos = useMemo(() => {
         const envPhotos = config.photos?.map((src, index) => ({
             src,
-            fallback: [photo1Default, photo2Default, photo3Default][index % 3],
+            fallback: [photo1Default, photo2Default, photo3Default, photo4Default, photo5Default][index % 5],
             key: `env-${index}`,
         })) ?? [];
         const base = envPhotos.length > 0
@@ -32,8 +34,8 @@ export const PhotoGallery = () => {
                 { src: PHOTO_ASSETS.photo1 || photo1Default, fallback: photo1Default, key: "p1" },
                 { src: PHOTO_ASSETS.photo2 || photo2Default, fallback: photo2Default, key: "p2" },
                 { src: PHOTO_ASSETS.photo3 || photo3Default, fallback: photo3Default, key: "p3" },
-                { src: PHOTO_ASSETS.photo4 || photo1Default, fallback: photo1Default, key: "p4" },
-                { src: PHOTO_ASSETS.photo5 || photo2Default, fallback: photo2Default, key: "p5" },
+                { src: PHOTO_ASSETS.photo4 || photo4Default, fallback: photo4Default, key: "p4" },
+                { src: PHOTO_ASSETS.photo5 || photo5Default, fallback: photo5Default, key: "p5" },
             ].filter(p => p.src !== null);
         const captions = relationship === 'partner' ? [
             "Cantiknya pacarku tersayang 💕",
@@ -117,8 +119,8 @@ export const PhotoGallery = () => {
         return null;
     return (<>
       <section className="relative z-20 px-4 py-32 max-w-7xl mx-auto overflow-hidden">
-        <motion.h3 initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="font-display text-6xl md:text-8xl lg:text-[10rem] font-black text-center mb-24 bg-gradient-to-b from-white via-white/80 to-white/20 bg-clip-text text-transparent drop-shadow-2xl">
-          MEMORIES 📸
+        <motion.h3 initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="font-display text-6xl md:text-8xl lg:text-[10rem] font-black text-center mb-24 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 bg-clip-text text-transparent drop-shadow-[0_8px_32px_rgba(244,63,94,0.6)]">
+          Our Special Memories 🎞️
         </motion.h3>
 
         <motion.div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{ rotateX, rotateY, perspective: 1000 }} className={`relative group ${isMobile ? '' : 'cursor-none'}`}>
