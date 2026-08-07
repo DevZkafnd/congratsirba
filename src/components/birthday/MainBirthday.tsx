@@ -123,7 +123,7 @@ export const MainBirthday = () => {
             ? ["💖", "💕", "💍", "💘", "💋", "🌹", "✨", "💫"]
             : relationship === 'friend'
                 ? ["🎉", "😎", "🍻", "🍕", "⭐", "🔥", "🎈", "🥳"]
-                : ["🎉", "🥳", "💖", "⭐", "🎈", "🎊", "🎁", "🎂", "✨", "💫"];
+                : ["🎓", "📚", "✨", "⭐", "💖", "🎊", "🎁", "👩‍🎓", "💕", "💫"];
         const interestEmojis: Record<string, string[]> = {
             car: ["🚗", "🏎️", "🏎", "🏎️", "⚙️", "🏁"],
             music: ["🎵", "🎶", "🎸", "🎹", "🎧", "🎤"],
@@ -202,7 +202,7 @@ export const MainBirthday = () => {
         </div>)}
 
       <AnimatePresence>
-        {emojis.map((e) => (<motion.div key={e.id} initial={{ opacity: 0, y: 100, x: `${e.x}%` }} animate={{ opacity: 1, y: -600, rotate: 360 }} exit={{ opacity: 0 }} transition={{ duration: 2.5, ease: "easeOut" }} className="fixed z-50 text-5xl pointer-events-none">
+        {emojis.map((e) => (<motion.div key={e.id} initial={{ opacity: 0, y: 100, x: `${e.x}%` }} animate={{ opacity: 1, y: -600, rotate: 360 }} exit={{ opacity: 0 }} transition={{ duration: 2.5, ease: "easeOut" }} className="fixed z-10 text-5xl pointer-events-none">
             {e.emoji}
           </motion.div>))}
       </AnimatePresence>
@@ -216,18 +216,18 @@ export const MainBirthday = () => {
         <motion.div variants={itemVariants} className="mb-6 relative z-10">
           <div className="flex justify-center mb-8"><HeartProgression stage={4}/></div>
           <motion.div whileHover={shouldAnimate ? { scale: 1.2, rotate: relationship === 'friend' ? [0, -10, 10, 0] : [0, -5, 5, 0] } : undefined} whileTap={{ scale: 0.9 }} className="text-8xl md:text-[10rem] mb-6 cursor-pointer drop-shadow-[0_0_50px_var(--color-primary)]" onClick={handleCakeClick}>
-            🎂
+            🎓👩‍🎓
           </motion.div>
-          {cakeClicks > 0 && cakeClicks < 7 && (<p className="text-primary font-bold animate-pulse">Click 🎂 {7 - cakeClicks} more times!</p>)}
+          {cakeClicks > 0 && cakeClicks < 7 && (<p className="text-primary font-bold animate-pulse">Click 🎓 {7 - cakeClicks} more times untuk surprise!</p>)}
         </motion.div>
 
-        <motion.h1 variants={itemVariants} className="font-display text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-black mb-4 break-words leading-tight px-2">
+        <motion.h1 variants={itemVariants} className="font-display text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-black mb-8 break-words leading-tight px-2">
           <span className="bg-gradient-to-r from-[var(--color-primary)] via-[hsl(45,100%,75%)] to-[hsl(200,80%,70%)] bg-clip-text text-transparent animate-gradient-shift drop-shadow-[0_4px_30px_rgba(255,255,255,0.3)]">
             Selamat Lulus Sidang
           </span>
         </motion.h1>
 
-        <motion.h2 variants={itemVariants} className="font-display text-5xl sm:text-7xl md:text-[10rem] lg:text-[13rem] font-black text-foreground animate-glow-pulse mb-10 break-words leading-none px-2">
+        <motion.h2 variants={itemVariants} className="font-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-foreground animate-glow-pulse mb-16 break-words leading-tight px-2">
           <TypeWriter text={`${name}!`} speed={120} delay={1500} cursor={false}/>
         </motion.h2>
 
@@ -328,10 +328,10 @@ export const MainBirthday = () => {
         {giftStage !== 'closed' && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-3xl p-6" onClick={() => setGiftStage('closed')}>
             <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.8, opacity: 0 }} transition={{ duration: 0.35 }} className="relative w-full max-w-3xl rounded-[2.5rem] border border-white/10 bg-black/90 p-6 sm:p-8 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)] max-h-[calc(100vh-4rem)] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
               {giftStage === 'party' ? (<div className="flex flex-col gap-6 text-center min-h-[42vh] justify-center">
-                  <div className="text-6xl">🎂🎉✨</div>
-                  <h3 className="text-4xl md:text-6xl font-black text-white">The party is teasing the surprise!</h3>
+                  <div className="text-6xl">🎓✨💕</div>
+                  <h3 className="text-4xl md:text-6xl font-black text-white">Selamat Wisuda Sayangku!</h3>
                   <p className="text-lg md:text-xl text-white/85 max-w-xl mx-auto leading-relaxed">
-                    The crowd is cheering, the lights are flashing, and the celebration message is made to stay visible on every screen. Watch the party tease before the gift reveal arrives.
+                    Aku sangat bangga dengan pencapaianmu sayang! Sebentar lagi aku akan tunjukkan surprise spesial yang sudah aku siapkan untukmu 💕
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
                     {[
