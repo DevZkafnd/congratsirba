@@ -1,0 +1,173 @@
+<svg width="150" height="800" xmlns="http://www.w3.org/2000/svg" transform="scale(-1, 1)">
+  <defs>
+    <!-- Vine/Ranting pattern -->
+    <g id="vine-section">
+      <!-- Main stem/ranting -->
+      <path d="M 75 0 Q 70 30 75 60 Q 80 90 75 120" 
+            stroke="#86753d" 
+            stroke-width="3" 
+            fill="none" 
+            opacity="0.8"/>
+      
+      <!-- Side branches/cabang -->
+      <path d="M 75 20 Q 60 25 50 35" 
+            stroke="#9d8653" 
+            stroke-width="2" 
+            fill="none" 
+            opacity="0.7"/>
+      <path d="M 75 45 Q 90 50 100 60" 
+            stroke="#9d8653" 
+            stroke-width="2" 
+            fill="none" 
+            opacity="0.7"/>
+      <path d="M 75 80 Q 55 85 45 95" 
+            stroke="#9d8653" 
+            stroke-width="2" 
+            fill="none" 
+            opacity="0.7"/>
+      <path d="M 75 105 Q 95 110 105 120" 
+            stroke="#9d8653" 
+            stroke-width="2" 
+            fill="none" 
+            opacity="0.7"/>
+      
+      <!-- Roots/akar kecil -->
+      <path d="M 50 35 L 45 40 L 48 42" 
+            stroke="#704214" 
+            stroke-width="1.5" 
+            fill="none" 
+            opacity="0.6"/>
+      <path d="M 100 60 L 105 65 L 102 67" 
+            stroke="#704214" 
+            stroke-width="1.5" 
+            fill="none" 
+            opacity="0.6"/>
+    </g>
+    
+    <!-- Rose flower -->
+    <g id="rose">
+      <!-- Outer petals -->
+      <ellipse cx="30" cy="30" rx="16" ry="14" 
+               fill="#f87171" 
+               opacity="0.7" 
+               transform="rotate(-15 30 30)"/>
+      <ellipse cx="30" cy="30" rx="16" ry="14" 
+               fill="#fb7185" 
+               opacity="0.7" 
+               transform="rotate(15 30 30)"/>
+      <!-- Middle petals -->
+      <circle cx="30" cy="30" r="12" fill="#fda4af" opacity="0.8"/>
+      <!-- Inner petals -->
+      <circle cx="30" cy="30" r="8" fill="#fecdd3" opacity="0.9"/>
+      <circle cx="30" cy="30" r="4" fill="#ffe4e6"/>
+      <!-- Center -->
+      <circle cx="30" cy="30" r="2" fill="#fb7185"/>
+      <!-- Petal details -->
+      <ellipse cx="26" cy="28" rx="3" ry="5" 
+               fill="#fff1f2" 
+               opacity="0.7" 
+               transform="rotate(-25 26 28)"/>
+      <ellipse cx="34" cy="28" rx="3" ry="5" 
+               fill="#fff1f2" 
+               opacity="0.7" 
+               transform="rotate(25 34 28)"/>
+    </g>
+    
+    <!-- Leaf -->
+    <g id="leaf">
+      <ellipse cx="20" cy="25" rx="10" ry="18" 
+               fill="#86efac" 
+               opacity="0.7" 
+               transform="rotate(-35 20 25)"/>
+      <path d="M 20 10 Q 22 25 20 40" 
+            stroke="#22c55e" 
+            stroke-width="1.5" 
+            fill="none" 
+            opacity="0.8"/>
+      <!-- Leaf veins -->
+      <path d="M 20 18 L 15 22" 
+            stroke="#16a34a" 
+            stroke-width="0.8" 
+            fill="none" 
+            opacity="0.6"/>
+      <path d="M 20 25 L 14 28" 
+            stroke="#16a34a" 
+            stroke-width="0.8" 
+            fill="none" 
+            opacity="0.6"/>
+      <path d="M 20 32 L 16 35" 
+            stroke="#16a34a" 
+            stroke-width="0.8" 
+            fill="none" 
+            opacity="0.6"/>
+    </g>
+    
+    <!-- Bud -->
+    <g id="bud">
+      <ellipse cx="18" cy="18" rx="6" ry="9" 
+               fill="#fca5a5" 
+               opacity="0.8"/>
+      <ellipse cx="18" cy="18" rx="4" ry="6" 
+               fill="#fecdd3" 
+               opacity="0.9"/>
+      <path d="M 16 12 Q 18 16 20 12" 
+            stroke="#22c55e" 
+            stroke-width="1.5" 
+            fill="none"/>
+    </g>
+    
+    <!-- Small flowers cluster -->
+    <g id="small-flowers">
+      <circle cx="25" cy="25" r="4" fill="#fda4af" opacity="0.8"/>
+      <circle cx="25" cy="25" r="2" fill="#fff1f2"/>
+      <circle cx="33" cy="22" r="3" fill="#fecdd3" opacity="0.8"/>
+      <circle cx="20" cy="28" r="3" fill="#ffe4e6" opacity="0.8"/>
+    </g>
+  </defs>
+  
+  <!-- Repeating pattern from top to bottom - MIRRORED -->
+  <g transform="scale(-1, 1) translate(-150, 0)">
+    <!-- Section 1: 0-120px -->
+    <use href="#vine-section" x="0" y="0"/>
+    <use href="#rose" x="15" y="10"/>
+    <use href="#leaf" x="80" y="25"/>
+    <use href="#small-flowers" x="40" y="70"/>
+    
+    <!-- Section 2: 120-240px -->
+    <use href="#vine-section" x="0" y="120"/>
+    <use href="#leaf" x="10" y="135"/>
+    <use href="#rose" x="20" y="155"/>
+    <use href="#bud" x="85" y="180"/>
+    <use href="#small-flowers" x="50" y="200"/>
+    
+    <!-- Section 3: 240-360px -->
+    <use href="#vine-section" x="0" y="240"/>
+    <use href="#rose" x="18" y="265"/>
+    <use href="#leaf" x="75" y="285"/>
+    <use href="#bud" x="100" y="305"/>
+    
+    <!-- Section 4: 360-480px -->
+    <use href="#vine-section" x="0" y="360"/>
+    <use href="#leaf" x="15" y="375"/>
+    <use href="#small-flowers" x="35" y="395"/>
+    <use href="#rose" x="22" y="420"/>
+    <use href="#leaf" x="80" y="445"/>
+    
+    <!-- Section 5: 480-600px -->
+    <use href="#vine-section" x="0" y="480"/>
+    <use href="#rose" x="20" y="505"/>
+    <use href="#bud" x="88" y="525"/>
+    <use href="#leaf" x="12" y="550"/>
+    
+    <!-- Section 6: 600-720px -->
+    <use href="#vine-section" x="0" y="600"/>
+    <use href="#small-flowers" x="40" y="620"/>
+    <use href="#rose" x="18" y="650"/>
+    <use href="#leaf" x="82" y="675"/>
+    
+    <!-- Section 7: 720-800px -->
+    <use href="#vine-section" x="0" y="720"/>
+    <use href="#leaf" x="15" y="735"/>
+    <use href="#rose" x="22" y="760"/>
+  </g>
+</svg>
