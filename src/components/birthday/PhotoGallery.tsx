@@ -120,7 +120,7 @@ export const PhotoGallery = () => {
     return (<>
       <section className="relative z-20 px-4 py-32 max-w-7xl mx-auto overflow-hidden">
         <motion.h3 initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="font-display text-6xl md:text-8xl lg:text-[10rem] font-black text-center mb-24 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 bg-clip-text text-transparent drop-shadow-[0_8px_32px_rgba(244,63,94,0.6)]">
-          Our Special Memories 🎞️
+          Your Beautiful Moments 🎞️
         </motion.h3>
 
         <motion.div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{ rotateX, rotateY, perspective: 1000 }} className={`relative group ${isMobile ? '' : 'cursor-none'}`}>

@@ -15,7 +15,7 @@ export const FinalSurprise = () => {
       <div className="max-w-6xl mx-auto">
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-20">
           <h2 className="font-display text-5xl md:text-8xl font-black mb-6 bg-gradient-to-r from-primary via-white to-accent bg-clip-text text-transparent">
-            Our Special Memories 🎞️
+            Your Beautiful Moments 🎞️
           </h2>
           <p className="text-xl md:text-2xl text-foreground/60 max-w-2xl mx-auto italic">
             "A journey of a thousand miles begins with a single step, but it's the moments we share that make it worth traveling."

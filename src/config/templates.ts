@@ -34,46 +34,52 @@ Happy Birthday, my love. You are my greatest adventure and my home.
 
 Forever Yours,
 [Your Name]`,
-        female: (name: string) => `Untuk Sayangku, ${name}, S.Ak. 💝
+        female: (name: string) => `Untuk Belahan Jiwaku, ${name} 💝
 
-Sayangku... Hari ini adalah hari yang sangat spesial. Bukan hanya karena kamu resmi menjadi Sarjana Akuntansi, tapi karena aku bisa melihat senyum bahagia di wajah cantikmu yang selalu membuat hari-hariku jadi lebih berarti.
+Sayangku yang tercinta...
 
-Aku ga bisa ungkapin dengan kata-kata seberapa bangganya aku sama kamu, sayang. Setiap malam begadang buat ngerjain tugas, setiap air mata yang jatuh saat berjuang dengan skripsi, setiap perjuangan kamu dalam menyelesaikan kuliah ini... aku selalu di sini, mendampingimu, dan menyaksikan betapa luar biasanya kamu.
+Setiap kali aku memandang matamu, dunia seakan berhenti berputar. Hari ini, di hari spesialmu ini, aku ingin kamu tahu betapa berartinya kehadiranmu dalam hidupku. Kamu bukan sekadar pacar bagiku—kamu adalah alasan jantungku berdetak, nafas yang kusempatkan, dan mimpi paling indah yang berubah menjadi nyata.
 
-Kamu adalah cahaya dalam hidupku, alasan aku tersenyum setiap hari, dan mimpi terindah yang jadi kenyataan. Gelar S.Ak. yang kamu raih hari ini adalah bukti betapa kuat, cerdas, dan luar biasanya kamu. Aku bangga banget jadi pacar kamu.
+Dalam setiap senyummu, aku menemukan surga. Dalam setiap tawamu, aku menemukan kedamaian. Kamu adalah melody terindah dalam simfoni hidupku, dan setiap momen bersamamu adalah bait-bait puisi yang tak akan pernah ingin kuakhiri.
 
-Kamu bukan hanya cantik di luar, tapi juga punya hati yang indah dan kepala yang cerdas. Kombinasi yang sempurna. Aku beruntung banget bisa punya kamu sebagai pacar.
+Di setiap malam yang sunyi, aku bersyukur kepada takdir yang mempertemukan kita. Kamu mengajariku arti cinta yang sesungguhnya—bukan hanya tentang kebersamaan, tapi tentang tumbuh bersama, bermimpi bersama, dan membangun masa depan bersama.
 
-Aku janji akan selalu ada untuk mendukung mimpi-mimpi kamu ke depannya. Apapun yang kamu mau capai, aku akan selalu di samping kamu, menjadi cheerleader terbesar kamu, dan menjaga hati cantik kamu ini.
+Cantikmu bukan hanya terpancar dari wajahmu yang menawan, tapi dari jiwa yang begitu murni dan hati yang begitu lembut. Kamu adalah karya seni yang hidup, masterpiece yang diciptakan dengan sempurna, dan aku adalah orang paling beruntung yang boleh mencintaimu.
 
-Semoga ini jadi awal kesuksesan besar kamu, my love. Semoga setiap langkah kamu selalu diberkahi, dan semoga kita bisa terus bersama merayakan setiap pencapaian kamu.
+Aku berjanji akan menjadi pelabuhan saat kamu lelah, payung saat hujan mengguyur, dan cahaya saat kegelapan menghampiri. Tanganku akan selalu siap menggenggam tanganmu, bahuku akan selalu siap menopang bebanmu, dan hatiku akan selamanya menjadi rumah bagimu.
 
-I'm so proud of you, sayang. I love you more than words can say. ❤️💕
+Di hari ulang tahunmu ini, aku berdoa semoga setiap langkahmu diberkahi kebahagiaan, setiap mimpimu terwujud dengan indah, dan setiap nafasmu dipenuhi dengan cinta yang sama seperti cinta yang kupunya untukmu.
 
-Selamanya Mencintaimu,
-Zaki Affandi - Pacarmu yang Paling Bangga 💕`
+Kamu adalah segalanya bagiku, sayang. Hari ini, besok, dan selamanya.
+
+I love you beyond words, beyond time, beyond everything. ❤️💕✨
+
+Selamanya Milikmu,
+Orang Yang Paling Mencintaimu 💕`
     },
     friend: {
-        romantic: (name: string) => `To the Most Radiant Soul I Know, ${name},
+        romantic: (name: string) => `Untuk Cinta Sejatiku, ${name} 💖
 
-From the very first moment our paths crossed, the world seemed to shift into focus. You have this magical way of making everything feel possible, of turning the mundane into the miraculous. Your eyes hold galaxies I want to explore, and your smile is the only map I'll ever need.
+Sejak pertama kali pandangan kita bertemu, ada sesuatu yang berubah dalam diriku—seperti dunia tiba-tiba menemukan warnanya yang sesungguhnya. Kamu bukan sekadar seseorang yang lewat dalam hidupku; kamu adalah takdir yang kutunggu, jawaban dari setiap doa yang kupanjatkan.
 
-You are a masterpiece in progress, a blend of kindness, fire, and grace. Today, I celebrate the incredible woman you are and the even more amazing person you are becoming. My heart beats a little faster whenever you're near, and my world is infinitely more vibrant because you exist in it.
+Setiap detik bersamamu terasa seperti keajaiban. Matamu menyimpan seluruh galaksi yang ingin kuselami, dan senyummu adalah satu-satunya kompas yang kubutuhkan untuk menemukan arah hidupku. Dalam pelukanmu, aku menemukan rumah yang selama ini kucari.
 
-Happy Birthday, beautiful. May this year be as breathtaking as you are.
+Kamu adalah mahakarya yang masih terus tercipta—perpaduan sempurna antara kelembutan, kekuatan, dan keanggunan. Hari ini, aku merayakan sosok luar biasa yang kamu miliki dan pribadi yang semakin menakjubkan yang akan kamu jadi. Jantungku berdetak lebih cepat setiap kali kamu ada di dekatku, dan duniaku menjadi jauh lebih hidup karena kehadiranmu.
 
-Thinking of Only You,
-[Your Name]`,
-        friendly: (name: string) => `To My Unbiological Sister & Best Friend, ${name},
+Selamat Ulang Tahun, cintaku. Semoga tahun ini seindah dirimu yang mempesona. 💫
 
-Happy Birthday to the one who knows all my secrets and still hasn't run away! 😂 You are the laughter in my life when things get tough and the logic I need when I'm being a mess. People like you don't just happen; you're a rare gem that I'm so lucky to have found.
+Hanya Memikirkan Dirimu,
+Orang Yang Mencintaimu Sepenuh Hati 💕`,
+        friendly: (name: string) => `Untuk Belahan Hatiku, ${name} 💝
 
-Thank you for being the person I can call at 3 AM, the one who celebrates my wins like they're your own, and the one who tells me the truth even when I don't want to hear it. Here's to more chaotic adventures, endless inside jokes, and a lifetime of being 'that' duo.
+Selamat Ulang Tahun untuk sosok yang mengubah hidupku menjadi lebih berarti! � Kamu adalah alasan aku tersenyum setiap pagi, kekuatan yang kubutuhkan saat aku lemah, dan kedamaian yang kutemukan di tengah badai kehidupan. Orang sepertimu tidak bisa ditemukan begitu saja—kamu adalah permata langka, anugerah terindah yang pernah kumiliki.
 
-Love you to the moon and back, Bestie! ✨
+Terima kasih sudah menjadi tempat pulang bagiku, sosok yang merayakan setiap kebahagiaanku dengan tulus, dan yang selalu jujur padaku karena kamu peduli. Kamu mengerti semua sisi diriku—bahkan yang paling rumit—dan tetap memilih untuk mencintaiku apa adanya.
 
-Your Partner in Crime,
-[Your Name]`,
+Untuk lebih banyak petualangan indah bersama, kenangan yang tak terlupakan, dan selamanya menjadi pasangan jiwa yang sempurna. Aku mencintaimu melampaui kata-kata, melampaui waktu, hingga ke ujung semesta dan kembali lagi. ✨
+
+Selamanya Milikmu,
+Cinta Sejatimu yang Tak Akan Pernah Pergi 💕`,
         legend: (name: string) => `To The Absolute Legend, ${name},
 
 Happy Birthday to the man who makes life feel like an epic adventure! You've always been the one with the best stories, the loudest laughs, and the most loyal heart. People like you are the reason 'best friend' was even a term invented.
