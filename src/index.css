@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    /* Background dengan gradasi pink-purple yang lebih soft dan romantic */
-    --background: 330 60% 15%;
-    --foreground: 330 20% 98%;
-    --card: 330 50% 20%;
-    --card-foreground: 330 20% 98%;
-    --popover: 330 50% 18%;
-    --popover-foreground: 330 20% 98%;
+    /* Background putih dengan aksen soft pink */
+    --background: 0 0% 98%;
+    --foreground: 340 15% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 340 15% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 15% 25%;
     
-    /* Warna primary pink yang lebih cerah dan ceria */
-    --primary: 330 85% 70%;
-    --primary-foreground: 330 40% 10%;
-    --secondary: 280 75% 75%;
-    --secondary-foreground: 330 40% 10%;
-    --muted: 330 30% 25%;
-    --muted-foreground: 330 15% 80%;
+    /* Warna primary pink soft dan elegan */
+    --primary: 340 82% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 45% 90%;
+    --secondary-foreground: 340 15% 25%;
+    --muted: 340 20% 95%;
+    --muted-foreground: 340 10% 45%;
     
-    /* Accent colors yang lebih vibrant */
-    --accent: 320 95% 75%;
-    --accent-foreground: 330 40% 10%;
+    /* Accent colors yang soft dan romantic */
+    --accent: 350 75% 70%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 330 40% 30%;
-    --input: 330 40% 30%;
-    --ring: 330 85% 70%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 25% 92%;
+    --input: 340 25% 92%;
+    --ring: 340 82% 65%;
     --radius: 1.5rem;
     
-    /* Birthday colors - lebih cerah dan playful */
-    --birthday-pink: 330 90% 75%;
-    --birthday-purple: 280 80% 75%;
-    --birthday-gold: 45 95% 75%;
-    --birthday-sky: 200 80% 75%;
-    --birthday-coral: 350 90% 75%;
-    --birthday-mint: 160 70% 75%;
+    /* Birthday colors - soft pastels */
+    --birthday-pink: 340 75% 75%;
+    --birthday-purple: 280 60% 80%;
+    --birthday-gold: 45 85% 75%;
+    --birthday-sky: 200 70% 80%;
+    --birthday-coral: 350 70% 75%;
+    --birthday-mint: 160 60% 80%;
     
-    /* Glow effects */
-    --glow-pink: 330 90% 75%;
-    --glow-purple: 280 80% 75%;
+    /* Glow effects soft */
+    --glow-pink: 340 80% 70%;
+    --glow-purple: 280 65% 75%;
   }
 
   * {
@@ -55,29 +55,11 @@
     overflow-x: hidden;
     position: relative;
     
-    /* Animated gradient background yang cantik */
-    background: linear-gradient(
-      135deg,
-      hsl(330, 60%, 15%) 0%,
-      hsl(320, 55%, 18%) 25%,
-      hsl(310, 50%, 20%) 50%,
-      hsl(330, 55%, 18%) 75%,
-      hsl(340, 60%, 15%) 100%
-    );
-    background-size: 400% 400%;
-    animation: gradient-shift 15s ease infinite;
-  }
-  
-  @keyframes gradient-shift {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
+    /* Background putih bersih dengan subtle texture */
+    background: #fafafa;
   }
 
-  /* Floating particles/sparkles background */
+  /* Floral frame borders - Elegant side decorations */
   body::before {
     content: "";
     position: fixed;
@@ -85,47 +67,26 @@
     z-index: 0;
     pointer-events: none;
     background-image: 
-      radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(186, 85, 211, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(255, 192, 203, 0.1) 0%, transparent 50%);
-    animation: float-glow 8s ease-in-out infinite;
-  }
-  
-  @keyframes float-glow {
-    0%, 100% {
-      opacity: 0.6;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.9;
-      transform: scale(1.1);
-    }
+      /* Left floral border */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 800'%3E%3Cpath d='M20 50 Q10 55 20 60 Q15 65 20 70 Q10 75 20 80' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='15' cy='60' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3Ccircle cx='25' cy='55' r='6' fill='%23fbcfe8' opacity='0.4'/%3E%3Ccircle cx='20' cy='70' r='7' fill='%23f9a8d4' opacity='0.4'/%3E%3Cpath d='M20 150 Q10 155 20 160 Q15 165 20 170 Q10 175 20 180' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='15' cy='160' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3Cpath d='M20 250 Q10 255 20 260' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='20' cy='255' r='6' fill='%23fbcfe8' opacity='0.4'/%3E%3Cpath d='M20 350 Q10 355 20 360 Q15 365 20 370' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='15' cy='360' r='7' fill='%23f9a8d4' opacity='0.4'/%3E%3Cpath d='M20 450 Q10 455 20 460' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='20' cy='455' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3C/svg%3E"),
+      /* Right floral border */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 800'%3E%3Cpath d='M80 50 Q90 55 80 60 Q85 65 80 70 Q90 75 80 80' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='85' cy='60' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3Ccircle cx='75' cy='55' r='6' fill='%23fbcfe8' opacity='0.4'/%3E%3Ccircle cx='80' cy='70' r='7' fill='%23f9a8d4' opacity='0.4'/%3E%3Cpath d='M80 150 Q90 155 80 160 Q85 165 80 170 Q90 175 80 180' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='85' cy='160' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3Cpath d='M80 250 Q90 255 80 260' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='80' cy='255' r='6' fill='%23fbcfe8' opacity='0.4'/%3E%3Cpath d='M80 350 Q90 355 80 360 Q85 365 80 370' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='85' cy='360' r='7' fill='%23f9a8d4' opacity='0.4'/%3E%3Cpath d='M80 450 Q90 455 80 460' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='80' cy='455' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3C/svg%3E");
+    background-position: left center, right center;
+    background-size: 80px 100%, 80px 100%;
+    background-repeat: repeat-y;
+    opacity: 0.6;
   }
 
-  /* Film grain effect - lebih halus */
+  /* Subtle paper texture */
   body::after {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: 9999;
+    z-index: 0;
     pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.02;
-    mix-blend-mode: overlay;
-  }
-
-  /* Vignette yang lebih soft */
-  .vignette {
-    position: fixed;
-    inset: 0;
-    z-index: 9998;
-    pointer-events: none;
-    background: radial-gradient(
-      circle at center,
-      transparent 0%,
-      rgba(255, 105, 180, 0.1) 50%,
-      rgba(138, 43, 226, 0.2) 100%
-    );
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    mix-blend-mode: multiply;
   }
 }
 

@@ -15,7 +15,7 @@ import { FireflyEffect } from "@/components/birthday/FireflyEffect";
 import { FloatingOrbs } from "@/components/birthday/FloatingOrbs";
 import { ShootingStars } from "@/components/birthday/ShootingStars";
 import { AnimatedGradient } from "@/components/birthday/AnimatedGradient";
-import { EmojiCursorTrail } from "@/components/birthday/EmojiCursorTrail";
+// import { EmojiCursorTrail } from "@/components/birthday/EmojiCursorTrail"; // Disabled - too much animation
 import { PremiumFireworks } from "@/components/birthday/PremiumFireworks";
 import { isPasswordRequired } from "@/utils/password";
 type Phase = "splash" | "unlock" | "intro" | "main";
@@ -25,16 +25,16 @@ const Index = () => {
     const isMobile = useIsMobile();
     const config = useBirthdayStore((state) => state.config);
     useDynamicTheme();
-    return (<div className="min-h-screen transition-colors duration-1000 relative overflow-hidden" style={{ background: 'var(--bg-gradient, #000)' }}>
+    return (<div className="min-h-screen transition-colors duration-1000 relative overflow-hidden" style={{ background: 'var(--bg-gradient, #fafafa)' }}>
       
-      <EmojiCursorTrail />
+      {/* <EmojiCursorTrail /> */}
       <PremiumFireworks runKey={fireworksRunKey}/>
-      <AnimatedGradient />
+      {/* Removed AnimatedGradient - using clean background */}
       {phase === "main" && (<>
           <FloatingElements />
-          <SparkleRain intensity={isMobile ? 5 : 10}/>
-          <FireflyEffect intensity={isMobile ? 5 : 8}/>
-          <FloatingOrbs count={isMobile ? 3 : 5}/>
+          <SparkleRain intensity={isMobile ? 3 : 5}/>
+          <FireflyEffect intensity={isMobile ? 3 : 5}/>
+          <FloatingOrbs count={isMobile ? 2 : 3}/>
         </>)}
 
       

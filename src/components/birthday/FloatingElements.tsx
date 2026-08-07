@@ -21,11 +21,11 @@ export const FloatingElements = () => {
     useEffect(() => {
         const particleSpeed = relationship === 'partner' ? 1.5 :
             relationship === 'friend' ? 0.5 : 1;
-        const newItems = Array.from({ length: 30 }, (_, i) => ({
+        const newItems = Array.from({ length: 12 }, (_, i) => ({ // Reduced from 30 to 12
             id: i,
             x: Math.random() * 100,
             y: Math.random() * 100,
-            size: 0.5 + Math.random() * 2.5,
+            size: 0.5 + Math.random() * 1.5, // Reduced max size
             duration: (20 + Math.random() * 40) * particleSpeed,
             delay: Math.random() * -30,
             element: emojiKit.floating[Math.floor(Math.random() * emojiKit.floating.length)],
@@ -61,8 +61,8 @@ const ParallaxItem = ({ item, scrollY }: {
             left: `${item.x}%`,
             top: `${item.y}%`,
             fontSize: `${item.size}rem`,
-            opacity: 0.15 / item.depth,
-            filter: `blur(${item.depth - 1}px)`,
+            opacity: 0.08 / item.depth, // Reduced from 0.15
+            filter: `blur(${item.depth}px)`, // Increased blur for softer effect
             y,
         }} initial={{ y: 0 }} animate={{
             x: [0, 30, 0],
