@@ -55,38 +55,28 @@
     overflow-x: hidden;
     position: relative;
     
-    /* Background putih bersih dengan subtle texture */
-    background: #fafafa;
+    /* Clean white background with soft gradient */
+    background: linear-gradient(to bottom, #ffffff 0%, #fef3f7 100%);
   }
 
-  /* Floral frame borders - Elegant side decorations */
+  /* Decorative pink gradient borders on sides - elegant and simple */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
-    background-image: 
-      /* Left floral border */
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 800'%3E%3Cpath d='M20 50 Q10 55 20 60 Q15 65 20 70 Q10 75 20 80' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='15' cy='60' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3Ccircle cx='25' cy='55' r='6' fill='%23fbcfe8' opacity='0.4'/%3E%3Ccircle cx='20' cy='70' r='7' fill='%23f9a8d4' opacity='0.4'/%3E%3Cpath d='M20 150 Q10 155 20 160 Q15 165 20 170 Q10 175 20 180' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='15' cy='160' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3Cpath d='M20 250 Q10 255 20 260' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='20' cy='255' r='6' fill='%23fbcfe8' opacity='0.4'/%3E%3Cpath d='M20 350 Q10 355 20 360 Q15 365 20 370' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='15' cy='360' r='7' fill='%23f9a8d4' opacity='0.4'/%3E%3Cpath d='M20 450 Q10 455 20 460' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='20' cy='455' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3C/svg%3E"),
-      /* Right floral border */
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 800'%3E%3Cpath d='M80 50 Q90 55 80 60 Q85 65 80 70 Q90 75 80 80' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='85' cy='60' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3Ccircle cx='75' cy='55' r='6' fill='%23fbcfe8' opacity='0.4'/%3E%3Ccircle cx='80' cy='70' r='7' fill='%23f9a8d4' opacity='0.4'/%3E%3Cpath d='M80 150 Q90 155 80 160 Q85 165 80 170 Q90 175 80 180' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='85' cy='160' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3Cpath d='M80 250 Q90 255 80 260' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='80' cy='255' r='6' fill='%23fbcfe8' opacity='0.4'/%3E%3Cpath d='M80 350 Q90 355 80 360 Q85 365 80 370' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='85' cy='360' r='7' fill='%23f9a8d4' opacity='0.4'/%3E%3Cpath d='M80 450 Q90 455 80 460' stroke='%23f8b4d9' fill='none' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='80' cy='455' r='8' fill='%23fce7f3' opacity='0.4'/%3E%3C/svg%3E");
-    background-position: left center, right center;
-    background-size: 80px 100%, 80px 100%;
-    background-repeat: repeat-y;
-    opacity: 0.6;
+    background: 
+      linear-gradient(to right, rgba(251, 207, 232, 0.15) 0px, transparent 100px),
+      linear-gradient(to left, rgba(251, 207, 232, 0.15) 0px, transparent 100px);
+    background-position: left, right;
+    background-size: 100px 100%, 100px 100%;
+    background-repeat: no-repeat;
   }
 
-  /* Subtle paper texture */
+  /* Remove paper texture - keep it clean */
   body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.03;
-    mix-blend-mode: multiply;
+    display: none;
   }
 }
 

@@ -25,20 +25,13 @@ const Index = () => {
     const isMobile = useIsMobile();
     const config = useBirthdayStore((state) => state.config);
     useDynamicTheme();
-    return (<div className="min-h-screen transition-colors duration-1000 relative overflow-hidden" style={{ background: 'var(--bg-gradient, #fafafa)' }}>
+    return (<div className="min-h-screen transition-colors duration-1000 relative overflow-hidden" style={{ background: '#fafafa' }}>
       
-      {/* <EmojiCursorTrail /> */}
+      {/* All emoji and particle effects disabled for clean design */}
       <PremiumFireworks runKey={fireworksRunKey}/>
-      {/* Removed AnimatedGradient - using clean background */}
-      {phase === "main" && (<>
-          <FloatingElements />
-          <SparkleRain intensity={isMobile ? 3 : 5}/>
-          <FireflyEffect intensity={isMobile ? 3 : 5}/>
-          <FloatingOrbs count={isMobile ? 2 : 3}/>
-        </>)}
 
       
-      <div className="vignette"/>
+      {/* Removed vignette effect */}
 
       
       {phase !== "main" && phase !== "unlock" && (<button onClick={() => setPhase("main")} className="fixed bottom-6 right-6 z-50 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-xl rounded-full text-white/40 hover:text-white/90 text-xs tracking-[0.2em] uppercase transition-all duration-300 shadow-2xl">
