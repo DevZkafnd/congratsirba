@@ -53,7 +53,7 @@ export const MainBirthday = () => {
     const reduceMotion = useReducedMotion();
     const shouldAnimate = !isMobile && !reduceMotion;
     const mood = getMood();
-    const letterSignoff = senderName ? `\n\nWith love,\n${senderName}` : '';
+    const letterSignoff = senderName ? `\n\nDengan Cinta,\n${senderName}` : '';
     const primaryColor = favoriteColor || '#FF6B6B';
     const bigWishes = useMemo(() => getBigWishes(name, relationship, gender, config.interests || []), [name, relationship, gender, config.interests]);
     const specialCode = useMemo(() => {

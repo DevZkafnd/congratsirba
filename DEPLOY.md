@@ -38,7 +38,7 @@ Klik button ini dan ikuti instruksinya:
    VITE_BIRTHDAY_INTERESTS=uang,kalkulator,grafik naik,toga,bunga
    VITE_BIRTHDAY_LETTER_TITLE=Untuk Irba Luthfiah, S.Ak.
    VITE_BIRTHDAY_CUSTOM_MESSAGE=Selamat menyandang gelar Sarjana Akuntansi! Semua kerja keras, lembur ngitung debit-kredit, dan begadang ngerjain skripsi akhirnya terbayar. Semoga karirmu secerah dan serapi laporan keuanganmu yang selalu balance ✨
-   VITE_BIRTHDAY_WISHER_NAME=Teman-temanmu
+   VITE_BIRTHDAY_WISHER_NAME=Zaki Affandi - Pacarmu yang selalu bangga 💕
    VITE_FAVORITE_EMOJIS=party,sparkle,star,graduation,money
    VITE_PHOTO_1=/assets/photo-1.png
    VITE_PHOTO_2=/assets/photo-2.png
