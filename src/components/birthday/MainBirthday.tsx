@@ -318,21 +318,21 @@ export const MainBirthday = () => {
 
       {config.showGiftSection && <section className="relative z-20 px-4 pb-20">
         <div className="max-w-6xl mx-auto">
-          <motion.button type="button" onClick={openGift} whileHover={shouldAnimate ? { scale: 1.02 } : undefined} whileTap={{ scale: 0.98 }} transition={{ duration: 0.3 }} className="w-full rounded-[3rem] border border-white/10 bg-gradient-to-r from-primary/15 to-transparent p-8 text-left shadow-2xl backdrop-blur-3xl hover:border-primary/40">
+          <motion.button type="button" onClick={openGift} whileHover={shouldAnimate ? { scale: 1.02 } : undefined} whileTap={{ scale: 0.98 }} transition={{ duration: 0.3 }} className="w-full rounded-[3rem] border-2 border-rose-200 bg-gradient-to-r from-white to-pink-50 p-8 text-left shadow-2xl hover:border-rose-400 hover:shadow-rose-200/50 transition-all">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div>
-                <p className="text-2xl md:text-3xl font-display font-black text-white">🎁 Hidden Gift Code</p>
-                <p className="mt-3 text-sm md:text-base text-foreground/70 max-w-2xl leading-relaxed">
-                  The party starts first, the crowd is hyped, and only then does the gift reveal open. Tap now to trigger the tease, light the dance floor, and keep the surprise waiting for its perfect moment.
+                <p className="text-2xl md:text-3xl font-display font-black text-gray-800">🎁 Hidden Gift Code</p>
+                <p className="mt-3 text-sm md:text-base text-gray-600 max-w-2xl leading-relaxed">
+                  Klik untuk membuka surprise spesial! Ada kode rahasia yang sudah disiapkan khusus untukmu. Party dulu, baru gift-nya muncul! 🎉
                 </p>
               </div>
-              <div className="inline-flex h-24 w-24 items-center justify-center rounded-3xl bg-white/10 text-4xl text-white shadow-[0_15px_50px_rgba(0,0,0,0.4)]">
+              <div className="inline-flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-rose-400 to-pink-500 text-4xl shadow-lg shadow-rose-300/50 animate-pulse">
                 🎁
               </div>
             </div>
-            <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm text-white/75">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10">✨</span>
-              Your code: <span className="font-semibold text-primary">{specialCode}</span>
+            <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-rose-100 px-4 py-2 text-sm text-gray-700 border border-rose-200">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-rose-200 text-rose-600">✨</span>
+              Your code: <span className="font-bold text-rose-600">{specialCode}</span>
             </div>
           </motion.button>
         </div>

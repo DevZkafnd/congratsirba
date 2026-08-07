@@ -34,16 +34,24 @@ Happy Birthday, my love. You are my greatest adventure and my home.
 
 Forever Yours,
 [Your Name]`,
-        female: (name: string) => `My Queen, My Muse, My Beautiful ${name},
+        female: (name: string) => `Untuk Sayangku, ${name}, S.Ak. 💝
 
-They say perfection doesn't exist, but every time I look at you, I see the flaw in that theory. You are the grace in my world, the light in my life, and the woman who makes my heart beat with purpose. Your strength inspires me, your intelligence humbles me, and your love... your love is the air I breathe.
+Sayangku... Hari ini adalah hari yang sangat spesial. Bukan hanya karena kamu resmi menjadi Sarjana Akuntansi, tapi karena aku bisa melihat senyum bahagia di wajah cantikmu yang selalu membuat hari-hariku jadi lebih berarti.
 
-On this special day, I want you to know that you are more than enough. You are extraordinary. Every laugh we share is a treasure, every silence a comfort. I vow to cherish you, to protect your beautiful heart, and to spend the rest of my days showing you how much you truly mean to me.
+Aku ga bisa ungkapin dengan kata-kata seberapa bangganya aku sama kamu, sayang. Setiap malam begadang buat ngerjain tugas, setiap air mata yang jatuh saat berjuang dengan skripsi, setiap perjuangan kamu dalam menyelesaikan kuliah ini... aku selalu di sini, mendampingimu, dan menyaksikan betapa luar biasanya kamu.
 
-Happy Birthday, my soulmate. May your light shine brighter than the stars tonight.
+Kamu adalah cahaya dalam hidupku, alasan aku tersenyum setiap hari, dan mimpi terindah yang jadi kenyataan. Gelar S.Ak. yang kamu raih hari ini adalah bukti betapa kuat, cerdas, dan luar biasanya kamu. Aku bangga banget jadi pacar kamu.
 
-With All My Soul,
-[Your Name]`
+Kamu bukan hanya cantik di luar, tapi juga punya hati yang indah dan kepala yang cerdas. Kombinasi yang sempurna. Aku beruntung banget bisa punya kamu sebagai pacar.
+
+Aku janji akan selalu ada untuk mendukung mimpi-mimpi kamu ke depannya. Apapun yang kamu mau capai, aku akan selalu di samping kamu, menjadi cheerleader terbesar kamu, dan menjaga hati cantik kamu ini.
+
+Semoga ini jadi awal kesuksesan besar kamu, my love. Semoga setiap langkah kamu selalu diberkahi, dan semoga kita bisa terus bersama merayakan setiap pencapaian kamu.
+
+I'm so proud of you, sayang. I love you more than words can say. ❤️💕
+
+Selamanya Mencintaimu,
+Zaki Affandi - Pacarmu yang Paling Bangga 💕`
     },
     friend: {
         romantic: (name: string) => `To the Most Radiant Soul I Know, ${name},
