@@ -6,6 +6,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import photo1Default from "@/assets/photo-1.jpg";
 import photo2Default from "@/assets/photo-2.jpg";
 import photo3Default from "@/assets/photo-3.jpg";
+
 export const PhotoGallery = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [lightbox, setLightbox] = useState<number | null>(null);
@@ -31,19 +32,27 @@ export const PhotoGallery = () => {
                 { src: PHOTO_ASSETS.photo1 || photo1Default, fallback: photo1Default, key: "p1" },
                 { src: PHOTO_ASSETS.photo2 || photo2Default, fallback: photo2Default, key: "p2" },
                 { src: PHOTO_ASSETS.photo3 || photo3Default, fallback: photo3Default, key: "p3" },
+                { src: PHOTO_ASSETS.photo4 || photo1Default, fallback: photo1Default, key: "p4" },
+                { src: PHOTO_ASSETS.photo5 || photo2Default, fallback: photo2Default, key: "p5" },
             ].filter(p => p.src !== null);
         const captions = relationship === 'partner' ? [
-            "Setiap momen bersamamu adalah anugerah",
-            "Membangun masa depan bersama",
-            "Tempat favorit hatiku"
+            "Cantiknya pacarku tersayang 💕",
+            "Setiap senyummu adalah kebahagiaanku",
+            "Bangga banget sama perjuangan kamu sayang",
+            "Kamu adalah cinta hidupku",
+            "Bersama kamu adalah tempat favoritku ❤️"
         ] : relationship === 'friend' ? [
             "Waktu-waktu seru bareng",
             "Bikin kenangan yang gak terlupakan",
-            "Tetap jadi diri sendiri"
+            "Tetap jadi diri sendiri",
+            "Keren banget!",
+            "Semangat terus!"
         ] : [
             "Keluarga adalah segalanya",
             "Menghargai setiap senyuman",
-            "Perjalanan penuh cinta"
+            "Perjalanan penuh cinta",
+            "Setiap momen berharga",
+            "Bangga sama kamu"
         ];
         return base.map((p, i) => ({
             ...p,

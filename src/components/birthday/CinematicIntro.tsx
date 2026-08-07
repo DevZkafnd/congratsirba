@@ -74,11 +74,11 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
         const isFemale = gender === 'female';
         if (relationship === 'partner') {
             return [
-                "Sayang, hari ini adalah hari yang special banget...",
+                "Sayang... hari ini adalah hari yang sangat special...",
                 "Hari dimana cinta hidupku akhirnya meraih mimpinya...",
-                isMale ? "Lelakiku yang aku cintai, yang sudah berjuang keras..." : isFemale ? "Wanita cantikku, yang akhirnya raih gelar S.Ak..." : "Belahan jiwaku yang pantang menyerah...",
-                "Aku selalu bangga setiap kamu begadang demi skripsi...",
-                "Dan sekarang aku mau kasih surprise special buat kesuksesanmu ini..."
+                "Wanita cantik yang aku cintai, yang sudah berjuang keras untuk sidangnya...",
+                "Aku selalu bangga setiap kamu begadang demi skripsi, demi mimpi kamu...",
+                "Dan sekarang, aku mau kasih surprise special untuk kelulusanmu ini... 💕"
             ];
         }
         if (relationship === 'friend') {
@@ -109,9 +109,9 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
         if (relationship === 'partner')
             return [
                 "Karena kamu bukan sekedar pacar buat aku...",
-                "Kamu adalah segalanya... cinta, rumah, dan masa depanku.",
-                "Aku sangat bangga bisa mendampingimu selama ini sayang...",
-                "Sekarang waktunya aku kasih kejutan romantis yang udah aku siapin buat kamu...",
+                "Kamu adalah cinta hidupku, rumahku, dan masa depanku sayang...",
+                "Aku sangat bangga bisa mendampingimu selama perjuangan kuliah ini...",
+                "Sekarang waktunya aku kasih kejutan romantis yang udah aku siapin khusus buat kamu... 💕",
             ];
         return [
             "Kamu tuh selalu bawa kehangatan dalam hidup kami...",
