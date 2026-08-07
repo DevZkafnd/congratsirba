@@ -244,11 +244,11 @@ const CakeCard = ({ cake, onSelect }: {
     onSelect: () => void;
 }) => {
     const isMobile = useIsMobile();
-    return (<motion.button whileHover={!isMobile ? { scale: 1.05, y: -10, rotateZ: 2 } : undefined} whileTap={{ scale: 0.95 }} onClick={onSelect} className="group relative flex flex-col items-center gap-3 p-3 border border-white/10 backdrop-blur-2xl transition-all duration-500 overflow-hidden" style={{
-            background: "linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))",
+    return (<motion.button whileHover={!isMobile ? { scale: 1.05, y: -10, rotateZ: 2 } : undefined} whileTap={{ scale: 0.95 }} onClick={onSelect} className="group relative flex flex-col items-center gap-3 p-3 border border-rose-200/60 backdrop-blur-2xl transition-all duration-500 overflow-hidden" style={{
+            background: "linear-gradient(135deg, rgba(255,255,255,0.9), rgba(254,242,242,0.95))",
             borderRadius: 'var(--card-radius, 2rem)',
             width: "180px",
-            boxShadow: "0 20px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.05)"
+            boxShadow: "0 20px 50px rgba(244,63,94,0.2), inset 0 0 20px rgba(244,63,94,0.05)"
         }}>
     <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-2">
       <img src={cake.image} alt={cake.name} className={`w-full h-full object-cover transition-transform duration-700 ${!isMobile ? "group-hover:scale-110" : ""}`}/>
@@ -259,7 +259,7 @@ const CakeCard = ({ cake, onSelect }: {
     </div>
 
     <div className="px-2 pb-3 text-center">
-      <span className="font-display text-sm font-black tracking-widest uppercase text-white/70 group-hover:text-primary transition-colors">
+      <span className="font-display text-sm font-black tracking-widest uppercase text-gray-700 group-hover:text-primary transition-colors">
         {cake.name}
       </span>
       <div className="flex gap-2 justify-center mt-3">
@@ -267,7 +267,7 @@ const CakeCard = ({ cake, onSelect }: {
       </div>
     </div>
     
-    <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"/>
+    <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"/>
   </motion.button>);
 };
 const CINEMATIC_TIMINGS = {
@@ -481,10 +481,10 @@ export const CakeCutting = () => {
 
       <div id="cake-section" className="relative z-20 py-16 sm:py-32 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="font-display text-4xl sm:text-6xl md:text-8xl font-black mb-6 bg-gradient-to-b from-pink-300 via-rose-300 to-white/20 bg-clip-text text-transparent">
+          <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="font-display text-4xl sm:text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(244,63,94,0.5)]">
             PILIH KUE UNTUK CINTA HIDUPKU 💕
           </motion.h3>
-          <p className="text-white/40 text-lg sm:text-xl mb-12 sm:mb-20 max-w-2xl mx-auto font-light tracking-widest uppercase">
+          <p className="text-gray-600 text-lg sm:text-xl mb-12 sm:mb-20 max-w-2xl mx-auto font-semibold tracking-widest uppercase">
             Kue Spesial untuk Orang Istimewa
           </p>
 
